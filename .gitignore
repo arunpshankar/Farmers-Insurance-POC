@@ -15,8 +15,8 @@ credentials/
 .Farmers-Insurance/
 
 # .DS_Store
-DS_Store
-DS_Store/
+.DS_Store
+.DS_Store/
 
 # Distribution / packaging
 .Python
