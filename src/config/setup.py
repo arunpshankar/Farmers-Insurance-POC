@@ -28,7 +28,7 @@ class Config:
         
         self.__config = self._load_config(config_path)
         self.PROJECT_ID = self.__config['project_id']
-        self.DATA_STORE_ID = self.__config['doc_search_datastore_id']
+        self.DATA_STORE_ID = self.__config['datastore_id']
         self.CREDENTIALS_PATH = self.__config['credentials_json']
         self._set_google_credentials(self.CREDENTIALS_PATH)
         self.ACCESS_TOKEN = self._set_access_token()

@@ -33,7 +33,7 @@ def search_data_store(search_query: str, filter_str: str) -> Optional[discoverye
         serving_config = client.serving_config_path(
             project=config.PROJECT_ID,
             location=LOCATION,
-            data_store=config.DOC_SEARCH_DATA_STORE_ID,
+            data_store=config.DATA_STORE_ID,
             serving_config="default_config",
         )
 
@@ -43,10 +43,10 @@ def search_data_store(search_query: str, filter_str: str) -> Optional[discoverye
             ),
             extractive_content_spec=discoveryengine.SearchRequest.ContentSearchSpec.ExtractiveContentSpec(
                 max_extractive_answer_count=3,
-                max_extractive_segment_count=1,
+                max_extractive_segment_count=3,
             ),
             summary_spec=discoveryengine.SearchRequest.ContentSearchSpec.SummarySpec(
-                summary_result_count=3,
+                summary_result_count=5,
                 include_citations=True,
                 ignore_adversarial_query=False,
                 ignore_non_summary_seeking_query=False,
@@ -92,8 +92,6 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
 
     for result in response.results:
         data = {
-            "company": "",
-            "title": "",
             "snippet": "",
             "link": ""
         }
@@ -105,20 +103,10 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
         struct_data = result_json.get('structData', {})
         derived_struct_data = result_json.get('derivedStructData', {})
 
-        # Extracting company
-        company = struct_data.get("company")
-        if company:
-            data["company"] = company
-
-        # Extracting title
-        title = derived_struct_data.get("title")
-        if title:
-            data["title"] = title
-
         # Extracting snippet
         snippets = derived_struct_data.get("snippets")
         if snippets:
-                data["snippet"] = snippets[0]['snippet']
+            data["snippet"] = snippets[0]['snippet']
 
         # Extracting link
         link = derived_struct_data.get("link")
@@ -131,16 +119,18 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
 
 # Usage example
 if __name__ == "__main__":
-    search_query = "annual report"
-    filter_str = "company: ANY(\"Standard Chartered Plc\")"
+    search_query = "I got a Farmers Call, how do I transfer it?"
+    filter_str = ""
 
     try:
-        results = search_data_store(search_query, filter_str)
-        if results:
-            extracted_data = extract_relevant_data(results)
-            for data in extracted_data:
-                logger.info(f"Company: {data['company']}, Title: {data['title']}, Snippet: {data['snippet']}, Link: {data['link']}")
-        else:
-            logger.error("No results returned from search_data_store function.")
+        hits = search_data_store(search_query, filter_str)
+        logger.info(hits)
+
+        matches = extract_relevant_data(hits)
+        for match in matches:
+            print(match)
+            print('-' * 100)
+        
+        #logger.error("No results returned from search_data_store function.")
     except Exception as e:
         logger.error(f"Error executing search_data_store: {e}")
