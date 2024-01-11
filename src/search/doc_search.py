@@ -4,6 +4,7 @@ from google.protobuf import json_format
 from src.config.logging import logger 
 from src.config.setup import config
 from typing import Optional
+from typing import Tuple 
 from typing import List
 from typing import Dict
 
@@ -39,7 +40,7 @@ def search_data_store(search_query: str, filter_str: str) -> Optional[discoverye
 
         content_search_spec = discoveryengine.SearchRequest.ContentSearchSpec(
             snippet_spec=discoveryengine.SearchRequest.ContentSearchSpec.SnippetSpec(
-                return_snippet=True
+                return_snippet=False  # snippets are NOT important in the context of this use case
             ),
             extractive_content_spec=discoveryengine.SearchRequest.ContentSearchSpec.ExtractiveContentSpec(
                 max_extractive_answer_count=3,
@@ -74,7 +75,8 @@ def search_data_store(search_query: str, filter_str: str) -> Optional[discoverye
         logger.error(f"Error during data store search: {e}")
         return None
 
-def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) -> List[Dict[str, str]]:
+
+def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]):
     """
     Extracts company, title, snippet, and link from the search response.
 
@@ -89,10 +91,16 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
     if response is None:
         logger.error("No response received to extract data.")
         return extracted_data
-
+    
+    summary = response.summary.summary_text
+    if summary:
+        extracted_data.append(summary)
+        
     for result in response.results:
         data = {
-            "snippet": "",
+            "extractive_answers": [],
+            "extractive_segments": [],
+            "knol_id": "",
             "link": ""
         }
 
@@ -103,10 +111,24 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
         struct_data = result_json.get('structData', {})
         derived_struct_data = result_json.get('derivedStructData', {})
 
-        # Extracting snippet
-        snippets = derived_struct_data.get("snippets")
-        if snippets:
-            data["snippet"] = snippets[0]['snippet']
+        knol_id = struct_data.get("Id")
+        data['knol_id'] = knol_id
+
+        # Collect extractive answers 
+        extractive_answers = derived_struct_data.get("extractive_answers")
+        if extractive_answers:
+            answers = []
+            for answer in extractive_answers:
+                answers.append(answer["content"])
+        data['extractive_answers'] = answers
+
+        # Collect extractive segmentss
+        extractive_segments = derived_struct_data.get("extractive_segments")
+        if extractive_segments:
+            segments = []
+            for segment in extractive_segments:
+                segments.append(segment["content"])
+            data["extractive_segments"] = segments
 
         # Extracting link
         link = derived_struct_data.get("link")
@@ -114,23 +136,44 @@ def extract_relevant_data(response: Optional[discoveryengine.SearchResponse]) ->
             data["link"] = link
 
         extracted_data.append(data)
-
     return extracted_data
+
+
+def create_summary_dict(matches):
+    """
+    Create a dictionary with the relevant data extracted from the matches.
+
+    :param matches: List of match data extracted.
+    :return: A dictionary containing the summary and details of each match.
+    """
+    summary_dict = {"summarized_answer": matches[0]}
+    match_info = []
+
+    rank = 1
+    for match in matches[1:]:
+        info = {
+            "rank": rank,
+            "link": match["link"],
+            "knowledge_id": match["knol_id"][0],
+            "extractive_answers": match["extractive_answers"],
+            "extractive_segments": match["extractive_segments"]
+        }
+        match_info.append(info)
+        rank += 1
+
+    summary_dict["match_info"] = match_info
+
+    return summary_dict
 
 # Usage example
 if __name__ == "__main__":
-    search_query = "I got a Farmers Call, how do I transfer it?"
-    filter_str = ""
+    search_query = "How do I stop pay a refund check?"
+    filter_str = "Brand: ANY(\"Farmers\")"
 
     try:
         hits = search_data_store(search_query, filter_str)
-        logger.info(hits)
-
         matches = extract_relevant_data(hits)
-        for match in matches:
-            print(match)
-            print('-' * 100)
-        
-        #logger.error("No results returned from search_data_store function.")
+        summary_dict = create_summary_dict(matches)
+        print(summary_dict)
     except Exception as e:
         logger.error(f"Error executing search_data_store: {e}")
