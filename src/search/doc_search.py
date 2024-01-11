@@ -4,9 +4,8 @@ from google.protobuf import json_format
 from src.config.logging import logger 
 from src.config.setup import config
 from typing import Optional
-from typing import Tuple 
-from typing import List
 from typing import Dict
+from typing import Any 
 
 
 LOCATION = "global" 
@@ -165,15 +164,43 @@ def create_summary_dict(matches):
 
     return summary_dict
 
-# Usage example
-if __name__ == "__main__":
-    search_query = "How do I stop pay a refund check?"
-    filter_str = "Brand: ANY(\"Farmers\")"
+
+def search(query: str, brand: str) -> Dict[str, Any]:
+    """
+    Searches a data store based on a given search query and brand, 
+    then consolidates the results in a dictionary.
+
+    Parameters:
+    query (str): The query used for searching the data store.
+    brand (str): The brand to filter the search results.
+
+    Returns:
+    Dict[str, Any]: A dictionary containing the consolidated results of the search.
+                    Returns an empty dictionary if an error occurs.
+    """
+    filter_str = f"Brand: ANY(\"{brand}\")"
 
     try:
-        hits = search_data_store(search_query, filter_str)
+        # Perform the search with the provided query and filter
+        hits = search_data_store(query, filter_str)
+
+        # Extract relevant data from the search results
         matches = extract_relevant_data(hits)
+
+        # Create a summary dictionary from the matches
         summary_dict = create_summary_dict(matches)
-        print(summary_dict)
+
+        return summary_dict
+
     except Exception as e:
+        # Log the error and return an empty dictionary or an error message
         logger.error(f"Error executing search_data_store: {e}")
+        return {}
+    
+
+if __name__ == "__main__":
+    query = "How do I stop pay a refund check?"
+    brand = "Farmers"
+
+    result = search(query, brand)
+    print(result)
