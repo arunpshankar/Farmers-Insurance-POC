@@ -1,45 +1,47 @@
 import pandas as pd 
 from src.generate.llm import LLM
 
-llm = LLM()
+def merge_answers(df: pd.DataFrame) -> list:
+    """ Merges answers from different columns of a DataFrame into a single list. """
+    merged_answers = []
+    for _, row in df.iterrows():
+        ans_exp_1, ans_exp_2, ans_exp_3 = row['ans_exp_1'], row['ans_exp_2'], row['ans_exp_3']
+        merged_ans = ['Answer 1', ans_exp_1, '\n\n', 'Answer 2', ans_exp_2, '\n\n', 'Answer 3', ans_exp_3]
+        merged_answers.append('\n'.join(merged_ans))
+    return merged_answers
 
+def coalesce_answers(merged_answers: list, llm: LLM) -> list:
+    """ Coalesces merged answers using the provided language model. """
+    return [llm.coalesce_answer(ans) for ans in merged_answers]
 
-df = pd.read_csv('./data/results/consolidated.csv')
+def save_to_csv(df: pd.DataFrame, file_path: str):
+    """ Saves DataFrame to a CSV file. """
+    df.to_csv(file_path, index=False)
+    print(f"DataFrame saved as CSV at {file_path}")
 
-merged_answers = []
-for _, row in df.iterrows():
-    merged_ans = []
-    _, _, _, _, _, ans_exp_1, ans_exp_2, ans_exp_3 = row 
-    merged_ans.append('Answer 1')
-    merged_ans.append(ans_exp_1)
-    merged_ans.append('\n\n')
-    merged_ans.append('Answer 2')
-    merged_ans.append(ans_exp_2)
-    merged_ans.append('\n\n')
-    merged_ans.append('Answer 3')
-    merged_ans.append(ans_exp_3)
-    merged_answers.append('\n'.join(merged_ans))
+def save_to_excel(df: pd.DataFrame, file_path: str):
+    """ Saves DataFrame to an Excel file with wrapped text. """
+    with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Results')
+        worksheet = writer.sheets['Results']
+        for idx, _ in enumerate(df):
+            worksheet.set_column(idx, idx, 20, writer.book.add_format({'text_wrap': True}))
+    print(f"DataFrame saved as Excel file at {file_path}")
 
-coalesced_answers = []
-for ans in merged_answers:
-    coalesced_answer = llm.coalesce_answer(ans)
-    coalesced_answers.append(coalesced_answer)
+def main():
+    llm = LLM()
+    df = pd.read_csv('./data/results/consolidated.csv')
 
+    merged_answers = merge_answers(df)
+    coalesced_answers = coalesce_answers(merged_answers, llm)
+    df['final_answer'] = coalesced_answers
 
-df['final_answer'] = coalesced_answers
+    # Save the combined DataFrame as new CSV and Excel files
+    csv_output_path = './data/results/coalesced.csv'
+    excel_output_path = './data/results/coalesced.xlsx'
 
-# Saving the combined DataFrame as a new CSV file 
-df.to_csv('./data/results/coalesced.csv', index=False)
+    save_to_csv(df, csv_output_path)
+    save_to_excel(df, excel_output_path)
 
-# Saving as an Excel file with wrapped text
-with pd.ExcelWriter('./data/results/coalesced.xlsx', engine='xlsxwriter') as writer:
-    df.to_excel(writer, index=False, sheet_name='Results')
-    worksheet = writer.sheets['Results']
-    for idx, col in enumerate(df):
-        worksheet.set_column(idx, idx, 20)  # Set column width
-        cell_format = writer.book.add_format({'text_wrap': True})
-        worksheet.set_column(idx, idx, cell_format=cell_format)
-
-
-
-
+if __name__ == "__main__":
+    main()

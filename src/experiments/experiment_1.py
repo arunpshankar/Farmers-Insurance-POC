@@ -1,8 +1,8 @@
-from typing import List, Dict
-import pandas as pd
 from src.experiments.retrieve import read_jsonl_file
 from src.config.logging import logger
 from src.generate.llm import LLM
+from typing import List, Dict
+import pandas as pd
 
 # Initialize the Language Model
 llm = LLM()
@@ -47,7 +47,7 @@ def save_to_excel(df: pd.DataFrame, file_path: str):
         with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
             df.to_excel(writer, index=False, sheet_name='Results')
             worksheet = writer.sheets['Results']
-            for idx, col in enumerate(df):
+            for idx, _ in enumerate(df):
                 worksheet.set_column(idx, idx, 20)  # Set column width
                 cell_format = writer.book.add_format({'text_wrap': True})
                 worksheet.set_column(idx, idx, cell_format=cell_format)

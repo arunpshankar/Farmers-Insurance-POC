@@ -1,59 +1,88 @@
 from src.experiments.retrieve import read_jsonl_file
+from src.config.logging import logger
 from src.generate.llm import LLM
+from typing import List, Dict
 import pandas as pd
 
 llm = LLM()
 
-# File paths
-jsonl_file_path = './data/results/eval_doc_search.jsonl'  # Adjusted file path for the assistant's file system
-csv_file_path = './data/input/eval.csv'
-output_csv_path = './data/results/exp_2.csv'
-joined_csv_path = './data/results/exp_2_joined.csv'
-excel_output_path = './data/results/exp_2_joined.xlsx'
+def extract_and_process_data(file_path: str) -> List[Dict]:
+    """ Extracts and processes data from a JSONL file. """
+    data = []
+    try:
+        query_results = read_jsonl_file(file_path)
+        for query_result in query_results:
+            summarized_answer = query_result.summarized_answer
+            citations = query_result.extract_citations(summarized_answer)
+            context = '\n\n'.join([query_result.get_extractive_answer_by_rank(rank) for rank in citations])
+            query = query_result.query
+            ans = llm.find_answer(query, context)
+            data.append({
+                'brand': query_result.brand,
+                'ans_exp_2': llm.format_answer(ans)
+            })
+    except Exception as e:
+        logger.error(f"Error in extracting and processing JSONL data: {e}")
+    return data
 
-# Reading JSONL file and extracting required information
-data = []
+def read_and_drop_csv(file_path: str, columns_to_drop: List[str]) -> pd.DataFrame:
+    """ Reads a CSV file and drops specified columns. """
+    try:
+        df = pd.read_csv(file_path)
+        return df.drop(columns=columns_to_drop)
+    except Exception as e:
+        logger.error(f"Error reading or processing CSV file: {e}")
+        return pd.DataFrame()
 
-query_results = read_jsonl_file(jsonl_file_path)
-for query_result in query_results:
-    summarized_answer = query_result.summarized_answer
-    citations = query_result.extract_citations(summarized_answer)
-    print(citations)
-    context = []
-    for rank in citations:
-        ans = query_result.get_extractive_answer_by_rank(rank)
-        context.append(ans)
-    context = '\n\n'.join(context)
-    query = query_result.query
-    ans = llm.find_answer(query, context)
-    data.append({
-            'question': query_result.query,
-            'brand': query_result.brand,
-            'ans_exp_2': llm.format_answer(ans)
-        })
+def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
+    """ Combines two DataFrames. """
+    try:
+        return pd.concat([df1, df2], axis=1)
+    except Exception as e:
+        logger.error(f"Error combining dataframes: {e}")
+        return pd.DataFrame()
 
-# Creating a DataFrame from the JSONL data and saving it as a CSV file
-df_jsonl = pd.DataFrame(data)
-df_jsonl.to_csv(output_csv_path, index=False)
+def save_to_csv(df: pd.DataFrame, file_path: str):
+    """ Saves DataFrame to a CSV file. """
+    try:
+        df.to_csv(file_path, index=False)
+        logger.info(f"DataFrame saved as CSV at {file_path}")
+    except Exception as e:
+        logger.error(f"Error saving CSV file: {e}")
 
-# Reading the original CSV file
-df_csv = pd.read_csv(csv_file_path)
+def save_to_excel(df: pd.DataFrame, file_path: str):
+    """ Saves DataFrame to an Excel file with wrapped text. """
+    try:
+        with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
+            df.to_excel(writer, index=False, sheet_name='Results')
+            worksheet = writer.sheets['Results']
+            for idx, _ in enumerate(df):
+                worksheet.set_column(idx, idx, 20, writer.book.add_format({'text_wrap': True}))
+        logger.info(f"DataFrame saved as Excel file at {file_path}")
+    except Exception as e:
+        logger.error(f"Error saving Excel file: {e}")
 
-# Dropping the specified columns: 'article_id', 'filter', 'matched_article'
-df_csv_dropped = df_csv.drop(columns=['article_id', 'filter', 'matched_articles'])
+def main():
+    """ Main function to execute the script tasks. """
+    # File paths
+    jsonl_file_path = './data/results/eval_doc_search.jsonl'  
+    csv_file_path = './data/input/eval.csv'
+    concat_csv_path = './data/results/exp_2.csv'
+    excel_output_path = './data/results/exp_2.xlsx'
 
-# Combining the two DataFrames based on the 'question' column
-df_joined = df_csv_dropped.merge(df_jsonl, on='question', how='outer')
+    jsonl_data = extract_and_process_data(jsonl_file_path)
+    df_jsonl = pd.DataFrame(jsonl_data)
 
-# Saving the combined DataFrame as a new CSV file 
-df_joined.to_csv(joined_csv_path, index=False)
+    df_csv_dropped = read_and_drop_csv(csv_file_path, ['article_id', 'filter', 'matched_articles'])
+    if df_csv_dropped.empty:
+        return
 
-# Saving as an Excel file with wrapped text
-with pd.ExcelWriter(excel_output_path, engine='xlsxwriter') as writer:
-    df_joined.to_excel(writer, index=False, sheet_name='Results')
-    worksheet = writer.sheets['Results']
-    for idx, col in enumerate(df_joined):
-        worksheet.set_column(idx, idx, 20)  # Set column width
-        cell_format = writer.book.add_format({'text_wrap': True})
-        worksheet.set_column(idx, idx, cell_format=cell_format)
+    df_combined = combine_dataframes(df_csv_dropped, df_jsonl)
+    if df_combined.empty:
+        return
 
+    save_to_csv(df_combined, concat_csv_path)
+    save_to_excel(df_combined, excel_output_path)
+
+if __name__ == "__main__":
+    main()
