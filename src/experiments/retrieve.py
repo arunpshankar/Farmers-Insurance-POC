@@ -1,9 +1,8 @@
-# Importing necessary libraries
-import json
 from typing import Any, Dict, List, Optional
-
-# Importing the custom logger
 from src.config.logging import logger
+from collections import Counter
+import json
+import re 
 
 class SearchResult:
     """
@@ -56,6 +55,44 @@ class QueryResults:
             if result.extractive_segments:
                 return result.extractive_segments[0]
         return ""
+    
+    def most_cited(self, text: str) -> list:
+        """
+        Returns the most frequently cited citation(s) from the given text.
+
+        Parameters:
+        text (str): The text from which the most cited citation(s) are to be identified.
+
+        Returns:
+        list: A list of the most frequently cited citation(s) as integers. In case of a tie, includes all.
+        """
+        try:
+            citations = re.findall(r'\[\d+\]', text)
+            citation_counts = Counter(int(citation.strip('[]')) for citation in citations)
+            if citation_counts:
+                max_freq = max(citation_counts.values())
+                return [citation for citation, count in citation_counts.items() if count == max_freq]
+            else:
+                return []
+        except Exception as e:
+            raise RuntimeError(f"An error occurred: {e}")
+
+    def extract_citations(self, text: str) -> list:
+        """
+        Extracts and returns a list of citations from the given text, sorted by frequency.
+
+        Parameters:
+        text (str): The text from which citations are to be extracted.
+
+        Returns:
+        list: A list of integers representing the citations, sorted by their frequency.
+        """
+        try:
+            citations = re.findall(r'\[\d+\]', text)
+            citation_counts = Counter(int(citation.strip('[]')) for citation in citations)
+            return sorted(citation_counts, key=citation_counts.get, reverse=True)
+        except Exception as e:
+            raise RuntimeError(f"An error occurred: {e}")
 
 
 def read_jsonl_file(file_path: str) -> List[QueryResults]:
@@ -86,7 +123,14 @@ if __name__ == "__main__":
         print()
         print(f"Query: {query_result.query}")
         print('-' * 30)
-        print(f"Summarized Answer: {query_result.summarized_answer}")
+        summarized_answer = query_result.summarized_answer
+        print(f"Summarized Answer: {summarized_answer}")
+        print('-' * 30)
+        citations = query_result.extract_citations(summarized_answer)
+        print(f"Citiations: {citations}")
+        print('-' * 30)
+        most_cited = query_result.most_cited(summarized_answer)
+        print(f"Most cited: {most_cited}")
         print('-' * 30)
         print(f"First Extractive Answer: {query_result.get_first_extractive_answer()}")
         print('-' * 30)

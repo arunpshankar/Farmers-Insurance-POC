@@ -1,0 +1,115 @@
+question,ans_exp_1
+How to reinstate policy if cancelled mid-term?,"- If an insurance policy is canceled mid-term due to non-payment, the insured has up to 11 calendar days to reinstate it with a lapse.
+- For example, if a policy is canceled on April 1, 2021, the insured would have until April 11, 2021, to make payment to reinstate the policy with a lapse."
+How do I stop pay a refund check?,"1. Open a Word document and title it with the current date, ""Void Stop,"" and your initials.
+2. Review the diary comments and void stop pay request.
+3. Ensure that at least one of the comments states that the agent or named insured was advised not to cash the original check. If not, the request cannot be processed.
+4. Process the void via AS400.
+5. Take a screenshot and copy it to the Word document before finalizing the AS400 void.
+6. Reapply a same-day refund to the policy.
+7. Update the Diary Comment policy to state: ""Processed Void Stop Pay request to Reapply refund to policy.""
+8. Save the Word document and screenshots to the shared Z drive: Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops.
+9. If one of the individuals on the refund check is now deceased, stop payment and reissue a refund check payable to both the living person and ""The Estate of"" the deceased person."
+What agents are restricted from writing higher limits?,"**Restricted Agents:**
+
+**California:**
+
+- 04036610461120047091404938490479074
+
+**Florida:**
+
+- 0991901094520409102710990068091024609107840942551094394509401900910400099134409907020991501
+
+**Pennsylvania:**
+
+- 371022637927373722409379344537229553722355"
+How do I remove a truck from the policy?,"To remove a vehicle from your policy:
+
+1. Send a signed request to Service Operations or your agent.
+2. If you are an agent, confirm that you received a signed insured request to drop the vehicle.
+3. If the customer is calling, let them know that a signed request is needed.
+4. You can also remove a total loss vehicle by searching the policy and selecting ""Remove Total Loss Vehicle"".
+5. The system will default to one day after the loss.
+6. You can also log into BWProducers.com and select ""Delete Vehicle"" on the appropriate vehicle.
+7. You can verify that you have obtained the signed request over the phone or process the change yourself.
+
+Note: You cannot remove a vehicle from a canceled policy."
+Is  home owner policy eligible for residence adres change ?,"- Homeowners policies are not eligible for a residence address change.
+- The policy must be re-written.
+- Renters policies can be updated after the discovery period.
+- If you move out of state, the policy will also need to be re-written."
+Customer received an expired Credit Card Letter,"- Expired credit card letters are automatically sent to customers who have autopay set up for their credit card.
+- The letters are sent to notify customers that their credit card is about to expire.
+- If a customer receives a letter and questions why, apologize and advise them to disregard the letter."
+Where can I see if a service charge is being applied?,"1. Open the Transaction Breakdown screen.
+2. Check if a service charge is being applied."
+What is teh MCO for state of New York ?,"- The MCO for New York is 41.
+- To confirm coverage, the registered owner must be listed as the primary named insured or additional named insured in MCO 41/42.
+- In MCO 46, the Primary Registered Owner field on the vehicle screen must match the MVF request."
+Can I cancel a Foremost policy by Chat?,"**How to Cancel a Foremost Policy:**
+
+1. **Property and Casualty Products:**
+    * You can cancel your policy within 30 days of the cancel request date by chat without additional documentation.
+    * You can also cancel your policy verbally without additional documentation.
+
+
+2. **Other Policies:**
+    * You must complete the Delaware Cancellation Affidavit (Form 8146) in place of a chat request."
+How do I  process a rush request for a letter of experience loss history letter?,"To process a rush request for a letter of experience loss history letter:
+
+1. Send an email to imaging@foremost.com.
+2. In the subject line, include ""Attn: Schedules"" and the policy number.
+3. You can also contact Service Operations."
+What is the process if insured wants total anual premium?,"**Specialty Dwelling Policies:**
+
+**FOCUS (PPPR):**
+
+1. Type ""IN"" in TRAN CODE and the policy number in NUMBER.
+2. Press enter.
+3. Type ""COV"" in the COMMAND line and press enter.
+4. The TOTAL POLICY PREM will display in the upper right column, directly below PRODUCER [3].
+
+**ForemostSTAR (P2N):**
+
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Billing"" tab.
+3. Scroll down the page to ""Billing Information.""
+4. The total policy premium will be located next to ""Total Policy Premium (Excludes Taxes and Fees)"" [3].
+
+**Casualty Policies:**
+
+**ForemostSTAR:**
+
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Coverages"" tab.
+3. The ""Total 1 Year Premium"" will show in the bottom right-hand corner [3]."
+How do I process a trampline in A360?,"1. In A360, locate the trampoline question.
+2. Select the ""Yes"" radio button for the trampoline question."
+What Tasks does the Service Assist Program assist with?,"**Service Assist Program:**
+
+- Opt-in, fee-based subscription designed to assist Farmers® agents with specific service transactions.
+
+**Services Provided:**
+
+- Billing inquiries
+- Digital enrollment
+- Policy updates
+- Agency Dashboard alerts"
+Can advoctates combine muliple submission into one for apprval ?,- Service Advocates cannot combine multiple submissions emailed by the agent for Submit For Approval into one.
+Can Account Underwriting handle COVERAGE34D ?,"I'm sorry, but I cannot format the answer as requested because the original answer is ""There is not enough information to answer the query."" There is no information to clean or format."
+"When placing an extension, what is the date that I should use?","- Extensions are given from the due date, not the date the extension was requested."
+How do I fix the issue where the Agent cannot enter a payment through their ACA?,"If you receive the pop-up message:
+1. ""Agent Credit Advice processing authority has been revoked. Contact your Service Center for assistance. (E84229)Are you sure?""
+2. You may not be able to process the ACA payment.
+
+You may also receive the error message:
+1. ""Agent Identification number not on file"" (E84178)"
+How do I a complete an Auto Change Form in CLS?,"To complete an Auto Change Form in CLS:
+
+1. Refer to the guide: Auto: Completing Change Form and Disposition in CLS [1, 3].
+2. Follow the steps outlined in the guide to complete the Auto Change Form."
+What is metcheck?,"MetCheck is a refund system.
+It is used by Agent360."
+What do I do if Returned mail doesn't contain a policy or account number?,"1. If the SR doesn't contain a policy or account number, search the returned document for any insured information, such as a valid policy, account number, or address.
+2. Use Agency Dashboard to research for policy information.
+3. If you find any insured information, send an email to the agent of record."

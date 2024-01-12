@@ -11,6 +11,7 @@ certifi==2023.11.17
 charset-normalizer==3.3.2
 click==8.1.7
 dataclasses-json==0.6.3
+et-xmlfile==1.1.0
 exceptiongroup==1.2.0
 faiss-cpu==1.7.4
 frozenlist==1.4.1
@@ -50,6 +51,7 @@ mdurl==0.1.2
 multidict==6.0.4
 mypy-extensions==1.0.0
 numpy==1.26.2
+openpyxl==3.1.2
 packaging==23.2
 pandas==2.1.4
 Pillow==10.1.0

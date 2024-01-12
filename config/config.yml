@@ -3,4 +3,4 @@ credentials_json: ./credentials/key.json
 datastore_id: farmers-v1_1704905391013
 user_pseudo_id: 12345
 text_embed_model_name: text-gecko@latest
-text_gen_model_name: gemini-pro@latest
+text_gen_model_name: chat-bison
