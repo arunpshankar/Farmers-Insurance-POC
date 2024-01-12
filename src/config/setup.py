@@ -32,8 +32,6 @@ class Config:
         self.CREDENTIALS_PATH = self.__config['credentials_json']
         self._set_google_credentials(self.CREDENTIALS_PATH)
         self.ACCESS_TOKEN = self._set_access_token()
-        self.USER_PSEUDO_ID = self.__config['user_pseudo_id']
-        self.TEXT_EMBED_MODEL_NAME = self.__config['text_embed_model_name']
         self.TEXT_GEN_MODEL_NAME = self.__config['text_gen_model_name']
 
     @staticmethod
