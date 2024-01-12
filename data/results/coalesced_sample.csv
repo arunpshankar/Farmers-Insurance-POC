@@ -1,0 +1,985 @@
+question,expected_ans,predicted_ans,reason,pass_fail,ans_exp_1,ans_exp_2,ans_exp_3,final_answer
+How to reinstate policy if cancelled mid-term?,"If policy is cancelled mid-term: insured has 10 days to reinstate without a lapse
+insured has an additional 10 days to reinstate with a lapse (reinstatement fee will apply)
+See the cancel invoice for the dates and details"," To reinstate a policy that has been cancelled mid-term, you will need to contact your insurance company as soon as possible. 
+They will be able to walk you through the process and let you know what documentation and information you will need to provide. 
+In general, you will need to pay the full amount of the premium that was due at the time of cancellation, as well as any late fees or other charges that may have been incurred. 
+You may also need to provide proof of insurability, such as a new driver's license or a medical exam. 
+Once you have provided all of the required information and paid the necessary fees, your policy will be reinstated and you will be covered again.
+",This answer appears to have come from the internet and not the knowledge content,pass,"**Reinstatement after a Mid-Term Cancellation for Non-Payment**
+
+- The insured has up to 11 calendar days to reinstate a policy canceled mid-term for non-payment.
+- For example, a policy canceled on April 1, 2021, would have until April 11, 2021, to make payment to reinstate with a lapse.","**To reinstate a policy that was canceled mid-term due to non-payment:**
+
+- The insured has up to 11 calendar days from the cancellation date to make the payment.
+- The policy can be reinstated with a lapse.
+
+**For example:**
+
+- If a policy was canceled on April 1, 2021, the insured would have until April 11, 2021 (counting April 1, 2021 as day 1) to make the payment and reinstate the policy with a lapse.","**How to Reinstate a Canceled Policy:**
+
+- The insured has up to 11 calendar days from the cancellation date to make the payment and reinstate the policy with a lapse.
+- For example, if a policy was canceled on April 1, 2021, the insured would have until April 11, 2021 (counting April 1 as day 1) to make the payment and reinstate the policy.
+
+**Note:** This option is not available for new business term policies.","**How to Reinstate a Policy Canceled Mid-Term for Non-Payment:**
+
+- The insured has up to 11 calendar days from the cancellation date to make the payment.
+- The policy can be reinstated with a lapse.
+
+**For example:**
+
+- If a policy was canceled on April 1, 2021, the insured would have until April 11, 2021 (counting April 1, 2021 as day 1) to make the payment and reinstate the policy with a lapse.
+
+**Note:** This option is not available for new business term policies."
+How do I stop pay a refund check?,"1.	Review When would a refund check be voided?
+2.	Verify that the check has not been cashed.  See How to Check the Status of a Refund Check
+	Refund was cashed:  It cannot be voided. 
+	Refund was not cashed:  Proceed to step 3
+3.	For a reissue:
+	Verify that it has been 10 business days since issued and the insured still has not received it.
+4.	Advise the caller not to cash the original if received and document the policy
+	Document the SR rather than the Void/Stop Form
+	Note:  This documentation is required even when the insured states the check is damaged, was not received, or lost.  
+5.	Complete BW Void/Stop Payment Request form in SRM.  Note:  If there are multiple checks to be voided, one void/stop form is sufficient.  Document the additional check numbers in the Other Special Instructions section.
+	Choose ""Returned Premium- Re-Apply"" to reapply refund to policy
+o	If the policy is to be reinstated due to accepting a payment less than what was required, document the request or follow up on the policy to verity it has been reinstated.
+	Choose ""Returned Premium-  Re-Issue"" to reissue and enter correct address to send to.
+	Issuing to a new address:
+o	Add diary comment to AS400 with new address
+	Address or Name on check is requested to be updated:
+o	Confirm in notes it has not already been edited by finance (address/name edits are not always reflected on the Check Number Assigned Screen; but will be in diary comments.)
+o	When the refund is issuing the same and the payment needs to be transferred but ""transfer"" cannot be hit to transfer the funds, submit a Void/Stop form.  In the event the refund check number has not generated yet, submit a Billing Action Needed form and Expedite the request. 
+	How to Reapply a Same Day Refund to a Policy
+	Add special instructions to include confirmation original has not cleared and the insured will be advised not to cash if received.
+6.	Add diary comment to include advising not to cash original, that it has been verified as not having cleared
+7.	Refer SR
+8.	Process can take 1-2 business days
+	How long does it take to void and reissue a refund check?
+"," To stop payment on a refund check, you will need to: 
+
+1. Advise the agent or named insured not to attempt to cash the original check. 
+2. Process Void Stop pay request via Mellon Bank. 
+3. Process void via AS400. 
+4. Diary comment policy: ""Processed Void Stop Pay request to ReIssue refund to NI"". 
+5. Save Word document screen shots to shared Z drive: Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year void stop pays/month void stop pays 
+",Both expected and referred article has info for the question,pass,"**How to Process a Refund Void Stop Pay Request**
+
+**Step 1: Create a Word Document**
+- Title the document with the current date, ""Void Stop,"" and your initials.
+
+**Step 2: Review Diary Comments and Void Stop Pay Request**
+- Ensure at least one comment states the agent or named insured was advised not to cash the original check.
+- If not noted, the request cannot be processed.
+
+**Step 3: Process the Void via AS400**
+- Take a screenshot and copy it to the Word document before finalizing the AS400 void.
+
+**Step 4: Reapply a Same-Day Refund to a Policy**
+- The Diary Comment policy should state: ""Processed Void Stop Pay request to Reapply refund to policy.""
+
+**Step 5: Save Word Document and Screenshots**
+- Save the Word document and screenshots to the shared Z drive:
+  - Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops
+
+**Additional Information:**
+- If one of the individuals on the refund check is now deceased, you can stop payment and reissue a refund check payable to both the living person and ""The Estate of"" the deceased person.","**To stop payment on a refund check:**
+
+1. Ensure the request is properly documented. If not, close the request without processing it.
+2. Take a screenshot and copy the confirmation of the void(s) to a Word document.
+3. Process the void through AS400. Take a screenshot and copy it to the Word document before finalizing the AS400 void.
+4. Reapply the refund via AS400.
+5. Save the Word document screenshots to the shared Z drive: Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops.
+6. Open a Word document and title it with the current date followed by ""Void Stop"" and your initials.
+7. Review the diary comments and void stop pay request. Ensure that at least one of them states that the agent or named insured was advised not to attempt to cash the original check. If this is not noted, the request cannot be processed.","**How to Stop Payment on a Refund Check**
+
+**Step 1: Create a Word Document**
+- Title the document with the current date, followed by ""Void Stop"" and your initials.
+
+**Step 2: Review Diary Comments and Void Stop Pay Request**
+- Ensure that at least one comment states that the agent or insured was advised not to cash the original check.
+
+**Step 3: Handle Insufficient Documentation**
+- If the comments do not indicate this, email the representative and advise them to call out to provide this information.
+- Note the policy and let them know you will hold the request for 24-48 hours.
+- If the policy is not properly documented within the given time frame, close the request without processing it.
+
+**Step 4: Process Void Stop Pay Request via Mellon Bank**
+- Follow the instructions provided in the document titled ""How to process a void stop payment request via Mellon Bank.""
+
+**Step 5: Take and Save Screenshots**
+- Take screenshots of the confirmation of the void and copy them into your Word document.
+
+**Step 6: Process Void via AS400**
+- Take screenshots and copy them into the Word document before finalizing the AS400 void.
+
+**Step 7: Reapply Refund via AS400**
+- Follow the instructions in the document titled ""How to reapply a same-day refund to a policy.""
+
+**Step 8: Diary Comment the Policy**
+- State ""Processed Void Stop Pay request to Reapply refund to policy.""
+
+**Step 9: Save the Word Document**
+- Save the Word document with the screenshots to the shared Z drive in the following location:
+  - Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops","**How to Process a Refund Void Stop Pay Request**
+
+**Step 1: Create a Word Document**
+- Title the document with the current date, ""Void Stop,"" and your initials.
+
+**Step 2: Review Diary Comments and Void Stop Pay Request**
+- Ensure at least one comment states the agent or named insured was advised not to cash the original check.
+- If not noted, the request cannot be processed.
+
+**Step 3: Process the Void via AS400**
+- Take a screenshot and copy it to the Word document before finalizing the AS400 void.
+
+**Step 4: Reapply a Same-Day Refund to a Policy**
+- The Diary Comment policy should state: ""Processed Void Stop Pay request to Reapply refund to policy.""
+
+**Step 5: Save Word Document and Screenshots**
+- Save the Word document and screenshots to the shared Z drive:
+  - Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops
+
+**Additional Information:**
+- If one of the individuals on the refund check is now deceased, you can stop payment and reissue a refund check payable to both the living person and ""The Estate of"" the deceased person."
+What agents are restricted from writing higher limits?,"California:
+0403661
+0461120
+0470914
+0493849
+0479074
+Florida:
+0991901
+0945204
+0910271
+0990068
+0910246
+0910784
+0942551
+0943945
+0940190
+0910400
+0991344
+0990702
+0991501
+Pennsylvania:
+3710226
+3792737
+3722409
+3793445
+3722955
+3722355
+Texas
+Currently there are no restricted agents in Texas"," California:
+04036610461120047091404938490479074
+Florida:
+099190109452040910271099006809102460910784094255109439450940190091040009913440990702
+0991501
+Pennsylvania:
+371022637927373722409379344537229553722355
+Texas
+Currently there are no restricted agents in Texas",Formating needs adjusting but overall ok,pass,"**Agents restricted from writing higher limits:**
+
+**California:**
+- 04036610461120047091404938490479074
+
+**Florida:**
+- 0991901094520409102710990068091024609107840942551094394509401900910400099134409907020991501
+
+**Pennsylvania:**
+- 371022637927373722409379344537229553722355",There is no information about which agents are restricted from writing higher limits in the provided context.,There is no answer provided in the context to format.,"**Agents restricted from writing higher limits:**
+
+**California:**
+- 04036610461120047091404938490479074
+
+**Florida:**
+- 0991901094520409102710990068091024609107840942551094394509401900910400099134409907020991501
+
+**Pennsylvania:**
+- 371022637927373722409379344537229553722355"
+How do I remove a truck from the policy?,"From PSP, 
+1.	Endorse policy
+	Vehicle(s) & Coverage
+2.	Enter effective date
+3.	Select Delete Vehicle
+4.	Select Rate/Submit
+5.	Input DC Comments
+	What is a DC Comment?
+6.	Submit Endorsement
+7.	Document SR and Policy
+
+From AS400 Master Menu
+1.	Input 44 next to ""Master Company"" 
+2.	Option 1 for Policy Processing
+3.	Option 2 for Endorsement
+4.	Enter policy number
+5.	Enter Effective Date of Change
+6.	Type 1 next to 'Policy Level Rating Screen' and press Enter
+7.	Notate 'Rate Premium' before change
+8.	F12 to return to Policy Processing screen
+9.	Type 1 next to Basic Contract Screen to Pend the policy
+10.	Enter the first letter of the customer's last name
+11.	Enter to Pend policy
+12.	Enter Endorsement effective date (choose same date as step 5)
+13.	Enter no Endorsement fee
+14.	Press F12 Twice
+15.	Option 4 for Error Correction
+16.	Type 1 next to Vehicle Screen
+17.	Type a 4 next to the vehicle you want to delete, enter
+18.	Select Y to confirm, enter
+19.	F12 to Error Correction
+20.	F9 to Rate
+21.	Type 1 next to 'Policy Level Rating Screen' and press Enter
+22.	Review 'Rate Premium' to verify premium change
+23.	F12 to return to Policy Processing screen
+24.	Document SR and Policy
+25.	Repeat steps 2-18 on any future effective mods
+Comments should include:
+	Name of Caller
+	Year/Make/Model of vehicle removed
+	Last 5 digits of the VIN being removed (If there is another vehicle with the same year/make/model)
+	Effective date
+	Premium changes
+	Full Term Premium
+	Any payment amounts, refunds, due dates provided
+"," To remove a vehicle from the policy, follow these steps:
+
+1. Log into BWProducers.com
+2. Hover over 'Manage my Customers'
+3. Hover over 'Policy Search'
+4. Select 'Search by Policy'
+5. Input policy number and click 'Search'
+6. Use drop-down next to Active/Future Effective policy term and select 'Policy Summary'
+7. Select 'Endorse Policy'
+8. Enter Effective Date
+9. Select 'OK'
+10. Select 'Vehicle/Coverage'
+11. Select 'Delete Vehicle' on appropriate vehicle
+12. Select 'Rate Policy'
+13. Select 'Continue Endorsement'
+14. Select 'Submit Endorsement'",Used article kaD4T000000TNE4UAO to come up with the content.,pass,"To remove a vehicle from the policy:
+
+- Send a signed request to Service Operations or your agent.
+- If the caller is an agent, confirm they received a signed insured request to drop the vehicle.
+- If the caller is a customer, inform them that a signed request is needed.
+- Search the policy and select ""Remove Total Loss Vehicle"" to remove a total loss vehicle.
+- Log into BWProducers.com and select ""Delete Vehicle"" on the appropriate vehicle.
+- Verify that you have obtained the signed request over the phone or process the change yourself.
+
+Note: You cannot remove a vehicle from a canceled policy.","To remove a truck from the policy:
+
+1. Obtain a signed request from the insured.
+2. The insured can send the request directly to Service Operations or provide it to their agent.
+3. If you are the agent, verify that you have received the signed request over the phone or process the change yourself.","To remove a truck from the policy:
+
+1. Submit a signed request to Service Operations or your agent.
+2. The agent can verify that they have received the signed request over the phone or process the change themselves.","To remove a vehicle from the policy:
+
+1. Obtain a signed request from the insured.
+2. The insured can send the request directly to Service Operations or provide it to their agent.
+3. If you are the agent, confirm that you have received the signed insured request to drop the vehicle.
+4. If the caller is a customer, inform them that a signed request is needed.
+5. Search the policy and select ""Remove Total Loss Vehicle"" to remove a total loss vehicle.
+6. Log into BWProducers.com and select ""Delete Vehicle"" on the appropriate vehicle.
+7. Verify that you have obtained the signed request over the phone or process the change yourself.
+
+Note: You cannot remove a vehicle from a canceled policy."
+Is  home owner policy eligible for residence adres change ?,No," Yes, a home owner policy is eligible for residence address change. 
+",Multiple articles talking about home policy address change,pass,"**Homeowners Policies:**
+
+- Not eligible for a residence address change.
+- Must be re-written.
+
+**Renters Policies:**
+
+- Can be updated after the discovery period.
+
+**Moving Out of State:**
+
+- Policy will need to be re-written.","- Homeowners policies are not eligible for a residence address change.
+- Homeowners policies must be re-written if the residence address changes.","- Homeowners policies cannot be modified for a change of address.
+- A new policy must be purchased for the new residence.","**Homeowners Policies:**
+
+- Not eligible for a residence address change.
+- Must be re-written.
+
+**Renters Policies:**
+
+- Can be updated after the discovery period.
+
+**Moving Out of State:**
+
+- Policy will need to be re-written."
+Customer received an expired Credit Card Letter,"Approximately 5-6K letters mailed on 10/11.  This was a one-time clean up mailing for all customers who had or have an upcoming credit card expiration.  The company advised in the letter for the customer to disregard the notice if the insured has already provided updated information. Due to data limitations, the company was not able to verify if customers banking information was recently updated. If customer questions why a letter was received, apologize and advise the customer to disregard. 
+
+Going forward, an Expired CC Outbound dialer will notify customers (approximately 1000 a month) that the credit card is about to expire. (If the expiration date is not updated the payment will decline.)
+
+If there are any questions, please contact a Supervisor."," This was a one-time clean up mailing for all customers who had or have an upcoming credit card expiration. The company advised in the letter for the customer to disregard the notice if the insured has already provided updated information. Due to data limitations, the company was not able to verify if customers banking information was recently updated. If customer questions why a letter was received, apologize and advise the customer to disregard. ",Missed few points but answered the question,partial pass,"**Expired Credit Card Letters**
+
+- Expired credit card letters are automatically sent to customers with autopay set up for their credit card.
+- The letters notify customers that their credit card is about to expire.
+- If a customer receives a letter and questions why, apologize and advise them to disregard the letter.","**The customer received an expired credit card letter because:**
+
+- The bank is informing them that their credit card is about to expire.
+- The bank is sending out these letters to approximately 1000 customers per month.
+- This is done as a courtesy to notify customers of the upcoming expiration date.","**Steps taken by the company:**
+
+- Sent out a one-time mailing of approximately 5-6K letters on October 11th to customers with an upcoming credit card expiration.
+- The purpose of the letter was to inform customers to disregard the notice if they have already provided updated information.
+- Due to data limitations, the company couldn't verify if the customer's banking information was recently updated.
+
+**What to do if a customer asks about the letter:**
+
+- Apologize and advise them to disregard the letter.
+
+**Going forward:**
+
+- An Expired CC Outbound dialer will notify customers (approximately 1000 per month) that their credit card is about to expire.
+- If the expiration date is not updated, the payment will decline.","**Expired Credit Card Letters**
+
+- Customers with autopay set up for their credit card may receive an expired credit card letter.
+- These letters notify customers that their credit card is about to expire.
+- The bank sends out approximately 1000 of these letters per month as a courtesy to notify customers of the upcoming expiration date.
+
+**Steps taken by the company:**
+
+- Sent out a one-time mailing of approximately 5-6K letters on October 11th to customers with an upcoming credit card expiration.
+- The purpose of the letter was to inform customers to disregard the notice if they have already provided updated information.
+- Due to data limitations, the company couldn't verify if the customer's banking information was recently updated.
+
+**What to do if a customer asks about the letter:**
+
+- Apologize and advise them to disregard the letter.
+
+**Going forward:**
+
+- An Expired CC Outbound dialer will notify customers (approximately 1000 per month) that their credit card is about to expire.
+- If the expiration date is not updated, the payment will decline."
+Where can I see if a service charge is being applied?,"The Installment Schedule screen displays the amount due by policy with each future installment in the current term, and how the amount was determined by policy. The schedule only displays future installments and does not include any current amounts or historical data. Working in conjunction with the Transaction Breakdown screen, which presents the current and historical data, these two screens provide a complete picture of the account by showing what has been billed, what is currently due today, and what will bill in the future.
+
+The Installment Schedule displays the future schedule as of today and is subject to changes as account and policy-level changes are made."," The Declarations Page will show the Fire Department Service Charge 
+and any additional coverages. ",The answer is clear for Fire Dpt Service Changes. There is another article talks about service chargers,partial pass,- You can use the Transaction Breakdown screen to see if a service charge is being applied.,There is no information provided about service charges in the context.,"**To check if a service charge is being applied:**
+
+1. Go to the Installment Schedule screen.
+2. Look for the ""Service Charge"" column.
+3. If there is a service charge, it will be listed under this column.","**To check if a service charge is being applied:**
+
+1. Go to the Installment Schedule screen.
+2. Look for the ""Service Charge"" column.
+3. If there is a service charge, it will be listed under this column.
+
+**Note:** You can also use the Transaction Breakdown screen to see if a service charge is being applied."
+What is teh MCO for state of New York ?," 41, 42, 46"," The MCO for the state of New York is 41.
+","Article ""kaD4T00000008TmUAI"" has 3 MCO for state of NY. Answer only listed first MCO",partial pass,"**New York MCO Requirements**
+
+- The MCO for New York is 41.
+- To confirm coverage, the registered owner must be listed as:
+  - The primary named insured
+  - Additional named insured in MCO 41/42
+- In MCO 46, the Primary Registered Owner field on the vehicle screen must match the MVF request.","- To find the information you need, visit the New York State Department of Motor Vehicles website.
+- Alternatively, you can contact the department directly for assistance.","**How to Determine MCO for New York State**
+
+1. Check MCO 41/42 to confirm that the registered owner is listed as the primary named insured or additional named insured.
+2. Ensure that the Primary Registered Owner field on the vehicle screen in MCO 46 matches the MVF request.
+
+**Note:** If the registered owner is listed on the policy but assigned to an incorrect vehicle, update the policy accordingly.","**New York MCO Requirements**
+
+- The MCO for New York is 41.
+- To confirm coverage, the registered owner must be listed as:
+  - The primary named insured
+  - Additional named insured in MCO 41/42
+- In MCO 46, the Primary Registered Owner field on the vehicle screen must match the MVF request.
+
+**How to Determine MCO for New York State**
+
+1. Check MCO 41/42 to confirm that the registered owner is listed as the primary named insured or additional named insured.
+2. Ensure that the Primary Registered Owner field on the vehicle screen in MCO 46 matches the MVF request.
+
+**Note:** If the registered owner is listed on the policy but assigned to an incorrect vehicle, update the policy accordingly."
+Can I cancel a Foremost policy by Chat?,Any variations of yes," Yes, First and Second named insureds or individuals with control, including additional named insureds, POAs and EOEs are allowed to verbally cancel any product in any state (Except Delaware). 
+Louisiana Special Process: The state of Louisiana requires a written request to be documented as part of the policy record. 
+Delaware Special Process: For Motorcycle and Motor Home policies being cancelled by insured request, Chat cancellations are not acceptable. The insured must complete the Delaware Cancellation Affidavit (Form 8146) in place of a Chat request, and it must be returned to Foremost. 
+Washington Special Process: A specific Chat cancellation script is not required, a clear request to cancel a policy can be received without specific formatting or phrasing. 
+Chat Cancellations may be done without additional documentation for Property and Casualty Products within 30 of the cancel request date (number of days applies when backdating only). When counting back the days, do not include the current day in the calculation. 
+Once the the 30-day time frame has passed, Advocates can still send the Chat cancellation script and collect a Yes answer, but appropriate supporting documents need to be received. 
+",Missing several notes and an important bullet point.  ,partial pass,"Sure, here's the reformatted answer:
+
+**How to cancel a Foremost policy:**
+
+**Within 30 days of the cancel request date:**
+
+- You can cancel a Property and Casualty policy by chat without additional documentation.
+- You can also cancel a policy verbally without additional documentation.
+
+**After 30 days of the cancel request date:**
+
+- You must complete the Delaware Cancellation Affidavit (Form 8146) in place of a chat request.","**To cancel your Foremost policy:**
+
+1. Complete the Delaware Cancellation Affidavit (Form 8146).
+2. Return the completed form to Foremost.","Sure, here's the reformatted answer:
+
+**How to Cancel a Foremost Policy:**
+
+1. **Eligibility:** Only the first and second named insureds or individuals with control, including additional named insureds, POAs, and EOE's, can cancel a policy through chat.
+
+2. **Verbal Cancellations:**
+   - Not accepted in Louisiana and Delaware.
+   - Must be made within 30 days of the cancellation request date.
+   - Proof of sale or another policy may be required if backdated beyond 30 days.
+   - Verbal cancellation scripts must be read directly to the individuals listed above (except in Washington).
+   - Do not apply for agent requests (except in Washington).
+
+3. **Written Cancellations:**
+   - Louisiana: Written cancellation request from the insured is required.
+   - Delaware: Complete the Delaware Cancellation Affidavit (Form 8146) and return it to Foremost.
+
+4. **Pending Sale:**
+   - If canceling for a future sale, wait until after the home has closed to avoid complications.","**How to Cancel a Foremost Policy:**
+
+**Within 30 days of the cancel request date:**
+
+- You can cancel a Property and Casualty policy by chat without additional documentation.
+- You can also cancel a policy verbally without additional documentation.
+
+**After 30 days of the cancel request date:**
+
+- You must complete the Delaware Cancellation Affidavit (Form 8146) in place of a chat request.
+
+**Eligibility:** Only the first and second named insureds or individuals with control, including additional named insureds, POAs, and EOE's, can cancel a policy through chat.
+
+**Verbal Cancellations:**
+
+- Not accepted in Louisiana and Delaware.
+- Must be made within 30 days of the cancellation request date.
+- Proof of sale or another policy may be required if backdated beyond 30 days.
+- Verbal cancellation scripts must be read directly to the individuals listed above (except in Washington).
+- Do not apply for agent requests (except in Washington).
+
+**Written Cancellations:**
+
+- Louisiana: Written cancellation request from the insured is required.
+- Delaware: Complete the Delaware Cancellation Affidavit (Form 8146) and return it to Foremost.
+
+**Pending Sale:**
+
+- If canceling for a future sale, wait until after the home has closed to avoid complications."
+How do I  process a rush request for a letter of experience loss history letter?,"Rush Requests: 
+1.	Retrieve claims information.
+	See How to Look Up Foremost Claims
+	Only retrieve claims information back 5 years for property and 3 years for casualty as that is what is utilized in loss history letters
+2.	Create loss history letter.
+a.	From the 360 View within the SR, click Links.
+b.	Under Links click ABL Application.
+c.	Choose the appropriate group: 
+	For agent policies: Select FL Letter.   
+	For direct customers: Select Direct Support.
+d.	Click Request View and a dropdown will appear.
+e.	In the dropdown choose the appropriate form:
+	For agent policies: Choose FL 140A for Loss History with Claims or FL 141A for Loss History without Claims.
+	For direct customers (USAA and non-AARP): Choose FISC 3 for Loss History with Claims or FISC 2 for Loss History without Claims.
+	For AARP direct customers: Choose one of the forms from AARP 3 through 8.
+f.	Fill out all the boxes manually. 
+	NOTE: Even for redbox letters, the entire letter must be filled out as the data scraping function only happens for ABLs being sent out by mail using the Submit button
+i.	Enter agent name or insured name:  The recipient. 
+ii.	Enter mailing address. (Optional if the letter is being faxed or emailed.)
+iii.	Enter the insured's name (or declaration name).  Check the declaration page then add the location address as:  'ADDR(-) street address, city only.  ***Note: Do not key in the state & zip.
+o	Example: John Smith ADDR-123 got it, Farmers World
+o	Note: For Motorcycle & Boat policies, only put the policy number, do not key in a location or the bike/boat information.
+iv.	Enter Policy Number.
+v.	Enter Company Name. How to Find the Company Name for a Policy
+vi.	Enter a Product type.  ***This field is not available on FL 140 or FL140A for Loss History with Claims.
+o	Specialty Dwelling
+o	Mobile Home
+o	Off Road Vehicle
+o	Motorcycle
+o	Motorhome
+o	Travel Trailer
+o	Marine
+o	Personal Watercraft
+vii.	Enter the original inception date of the policy 
+o	***This field is not available on FL 140 or FL 140A for Loss History with Claims
+viii.	Enter the Policy Expiration or Cancellation date 
+o	***This field is not available on FL 140 or FL 140A for Loss History with Claims
+ix.	Enter the time frame in years (one, two, three, four or five).
+o	For Property, go back a maximum of five years
+o	For Casualty, go back a maximum of three years
+o	Round up to whole years.  If the policy has been active six months, use one year.  If one year two months, use two years, etc.
+o	Type out the words.  ***Do not use numerals
+	Example: one, two, three, four or five. 
+x.	Enter claim date (xx/xx/xxxx)
+xi.	Enter Loss Type/Amount paid (Enter $0 if zero paid)  Ex: Wind / $123
+o	Note:  If a claim has been withdrawn or denied, it would not be a valid claim.  Do not list it on the loss history / letter of experience.
+xii.	Enter claims status (Closed, Open etc.)
+b.	Click Preview to generate the copy of the letter that can be sent.  It can be sent by fax or saved as a PDF and sent by email in SRM.
+i.	Send a copy of the letter to imaging at fax number 616-956-4412 or email to: usw.fic.imagingabp@foremost.com  - (Include the SR# in the subject line, and in the body of the email include the policy number and customer's name).
+c.	Note the SR with which letter type was sent and where it was sent."," Rush requests can be processed by transferring the agent to Specialty Service Operations. 
+",Answer is correct based on the article it has referred but first article has right information on Rush Request. It could have combined the answers.,partial pass,"To process a rush request for a letter of experience loss history letter:
+
+1. Send an email to imaging@foremost.com.
+2. In the subject line, include ""Attn: Schedules"" and the policy number.
+3. Alternatively, contact Service Operations.","To process a rush request for a letter of experience loss history letter:
+
+- In the comments area of the request, specify:
+ - The number of years to go back (maximum of 5 years for Specialty Dwelling and Mobile Home, maximum of 3 years for Recreational Vehicle).
+ - Any other requested information.
+
+- Send an email to imaging@foremost.com with the subject line ""Attn: Schedules [Policy Number]"".
+
+- Alternatively, contact Service Operations for assistance.","To process a rush request for a letter of experience loss history letter, follow these steps:
+
+- Log in to ForemostSTAR®.
+- Click ""Request a Loss History Report"" under ""Resources"" on the right side of the welcome page.
+- Enter the required information on the ""Request a Loss History Report"" window.
+- In the ""Comments Area,"" specify that it's a rush request and indicate the number of years of history needed (maximum of 5 years for Specialty Dwelling and Mobile Home, maximum of 3 years for Recreational Vehicle).
+- Click ""Submit"" at the bottom of the page.
+
+Your rush request will be processed within 4 business days.","To process a rush request for a letter of experience loss history letter, follow these steps:
+
+1. Log in to ForemostSTAR®.
+2. Click ""Request a Loss History Report"" under ""Resources"" on the right side of the welcome page.
+3. Enter the required information on the ""Request a Loss History Report"" window.
+4. In the ""Comments Area,"" specify that it's a rush request and indicate the number of years of history needed (maximum of 5 years for Specialty Dwelling and Mobile Home, maximum of 3 years for Recreational Vehicle).
+5. Click ""Submit"" at the bottom of the page.
+
+Alternatively, you can:
+
+1. Send an email to imaging@foremost.com.
+2. In the subject line, include ""Attn: Schedules"" and the policy number.
+3. In the comments area of the request, specify the number of years to go back (maximum of 5 years for Specialty Dwelling and Mobile Home, maximum of 3 years for Recreational Vehicle) and any other requested information.
+
+Your rush request will be processed within 4 business days."
+What is the process if insured wants total anual premium?,"From the main page of ForemostSTAR, click on the 'Search/Change Quote or Policy' tab.
+Enter the 10-digit policy number in the 'Quote/Policy Number' field. Click ""Search"".
+In the pop-up, click the radio button next to ""View Policy"", and click ""Go"".
+Select the 'Billing' tab.
+Scroll down to see the Total Policy Premium. "," To get the total annual premium, you can follow these steps:
+
+1. Multiply the base premium by the rating factor.
+2. Add the base premium and the rating factor together.
+3. Multiply the sum by the policy period.
+4. Add the policy fee to the product of the sum and the policy period.
+5. Add the state tax to the sum of the policy fee and the product of the sum and the policy period.
+6. The total annual premium is the sum of the state tax and the sum of the policy fee and the product of the sum and the policy period. ",Generic. Information not found in article,fail,"**Specialty Dwelling Policies:**
+
+**In FOCUS (PPPR):**
+1. Type ""IN"" in TRAN CODE and the policy number in NUMBER, then press enter.
+2. Type ""COV"" in the COMMAND line and press enter.
+3. The TOTAL POLICY PREM will be displayed in the upper right corner of the screen, directly below PRODUCER.
+
+**In ForemostSTAR (P2N):**
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Billing"" tab.
+3. Scroll down the page to ""Billing Information.""
+4. The total policy premium (excluding taxes and fees) will be located next to ""Total Policy Premium.""
+
+**Casualty Policies:**
+
+**In ForemostSTAR:**
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Coverages"" tab.
+3. The ""Total 1 Year Premium"" will be displayed in the bottom right-hand corner.","**To obtain the total annual premium for a Specialty Dwelling Policy in FOCUS (PPPR):**
+
+- Type ""IN"" in the TRAN CODE field and enter the policy number in the NUMBER field.
+- Press ""Enter.""
+- Type ""COV"" in the COMMAND line and press ""Enter.""
+
+**For Specialty Dwelling Policies in ForemostSTAR (P2N):**
+
+- Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+- Click on the ""Billing"" tab.
+- Scroll down the page to ""Billing Information.""
+
+**For Casualty Policies in ForemostSTAR:**
+
+- Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+- Click on the ""Coverages"" tab.","**To obtain the total annual premium, follow these steps:**
+
+**For Manufactured Home Policies:**
+
+1. Use KI21.
+2. Enter the policy number.
+3. Press the tab key and type ""G."".
+4. Press enter.
+5. The ""TOTAL WRIT PREM"" will be displayed at the top of the screen in the center column, directly below ""STATUS.""
+
+**For Commercial Rental Manufactured Home Policies:**
+
+1. Use FOCUS (PPPR).
+2. Type ""IN"" in the ""TRAN CODE"" field and enter the policy number in the ""NUMBER"" field.
+3. Press enter.
+4. Type ""COV"" in the command line and press enter.
+5. The ""TOTAL POLICY PREM"" will be displayed in the upper portion of the screen on the far right column, directly below ""PRODUCER.""
+
+**For Specialty Dwelling Policies (in FOCUS (PPPR)):**
+
+1. Use FOCUS (PPPR).
+2. Type ""IN"" in the ""TRAN CODE"" field and enter the policy number in the ""NUMBER"" field.
+3. Press enter.
+4. Type ""COV"" in the command line and press enter.
+5. The ""TOTAL POLICY PREM"" will be displayed in the upper portion of the screen on the far right column, directly below ""PRODUCER.""
+
+**For Specialty Dwelling Policies (in ForemostSTAR (P2N)):**
+
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Billing"" tab.
+3. Scroll down the page to ""Billing Information.""
+4. The total annual premium will be located next to ""Total Policy Premium (Excludes Taxes and Fees).""
+
+**For Casualty Policies:**
+
+1. Use ForemostSTAR.
+2. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+3. Click on the ""Coverages"" tab.
+4. The ""Total 1 Year Premium"" will be displayed in the bottom right-hand corner.","**To obtain the total annual premium for various policy types, follow these steps:**
+
+**For Manufactured Home Policies:**
+
+1. Use KI21.
+2. Enter the policy number.
+3. Press the tab key and type ""G."".
+4. Press enter.
+5. The ""TOTAL WRIT PREM"" will be displayed at the top of the screen in the center column, directly below ""STATUS.""
+
+**For Commercial Rental Manufactured Home Policies:**
+
+1. Use FOCUS (PPPR).
+2. Type ""IN"" in the ""TRAN CODE"" field and enter the policy number in the ""NUMBER"" field.
+3. Press enter.
+4. Type ""COV"" in the command line and press enter.
+5. The ""TOTAL POLICY PREM"" will be displayed in the upper portion of the screen on the far right column, directly below ""PRODUCER.""
+
+**For Specialty Dwelling Policies (in FOCUS (PPPR)):**
+
+1. Type ""IN"" in the TRAN CODE and the policy number in NUMBER, then press enter.
+2. Type ""COV"" in the COMMAND line and press enter.
+3. The TOTAL POLICY PREM will be displayed in the upper right corner of the screen, directly below PRODUCER.
+
+**For Specialty Dwelling Policies (in ForemostSTAR (P2N)):**
+
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Billing"" tab.
+3. Scroll down the page to ""Billing Information.""
+4. The total policy premium (excluding taxes and fees) will be located next to ""Total Policy Premium.""
+
+**For Casualty Policies:**
+
+1. Enter the ten-digit policy number in the ""Retrieve Quote or Policy"" tab.
+2. Click on the ""Coverages"" tab.
+3. The ""Total 1 Year Premium"" will be displayed in the bottom right-hand corner."
+How do I process a trampline in A360?,"Processing in Agent360 via PolicyCenter:
+1. Pull up the policy via PolicyCenter
+2. Ask the Customer / Agent the questions above regarding the trampoline and how it is used.
+3. Click on the Action dropdown to start a new change.
+4. Enter the effective date, what you are processing and who is initiating the change.
+5. Via Chat Assist, reach out to Underwriting to have them select Yes for the Trampoline, since Service Ops doesn't have the access.
+Once the information has been updated, there could be additional questions from Underwriting asked about the trampoline.
+6. Quote the change and Issue.
+7. If an Umbrella exists, make sure to add the trampoline to that policy as well.
+8. Document - Agent360 - Documentation (/articles/Knowledge/Agent360-Documentation)"," For Service: Access Company Use page in ARS under Residence Questions section, choose yes radio button for the Trampoline question.
+For Sales: Under Property Information select the Yes radio button for the Trampoline question.
+Submit endorsement. ","Asked for A360 process but received ARS process. Article has the word Agent360, question has A360",fail,"To process a trampoline in A360:
+
+1. Locate the trampoline question.
+2. Select the ""Yes"" radio button.","To process a trampline in A360, follow these steps:
+
+- Go to the Access Company Use page in ARS under the Residence Questions section.
+- Select the ""Yes"" radio button for the Trampoline question.
+
+Alternatively, you can also process a trampline in A360 by following these steps:
+
+- Go to the Property Information section under Sales.
+- Select the ""Yes"" radio button for the Trampoline question.","To process a trampline in A360:
+
+- Log in to your A360 account.
+- Click on the ""Policies"" tab.
+- Select the policy that contains the trampline you want to process.
+- Click on the ""Tramplines"" tab.
+- Select the trampline you want to process.
+- Click on the ""Process"" button.
+- Follow the on-screen instructions to complete the processing.","To process a trampoline in A360, follow these steps:
+
+1. Go to the Access Company Use page in ARS under the Residence Questions section.
+2. Select the ""Yes"" radio button for the Trampoline question.
+
+Alternatively, you can also process a trampoline in A360 by following these steps:
+
+1. Go to the Property Information section under Sales.
+2. Select the ""Yes"" radio button for the Trampoline question."
+What Tasks does the Service Assist Program assist with?,"	Billing inquiries
+	Digital enrollment
+	Policy updates
+	Agency Dashboard alerts
+"," The Service Assist Program assists with the following tasks:
+- Updating policy information
+- Making policy changes
+- Adding or removing drivers
+- Filing claims
+- Requesting roadside assistance
+- Paying bills
+- Getting policy documents
+- Transferring policies
+- Cancelling policies",Generic answer,fail,"**Service Assist Program:**
+
+- Opt-in, fee-based subscription to assist Farmers® agents with specific service transactions.
+
+**Services Provided:**
+
+- Billing inquiries.
+- Digital enrollment.
+- Policy updates.
+- Agency Dashboard alerts.","The Service Assist Program helps Farmers® agents with specific service transactions, including:
+
+- Billing inquiries
+- Digital enrollment
+- Policy updates
+- Agency Dashboard alerts
+
+Also, when a participating agent is unavailable, a Service Assist licensed representative team member may help with:
+
+- Quoting or binding additional coverage on existing policies
+- Trying to keep the customer when a cancellation request is received","The Service Assist Program helps Farmers® agents with specific service transactions, including:
+
+- Billing inquiries
+- Digital enrollment
+- Policy updates
+- Agency Dashboard alerts
+
+When a participating agent is unavailable, a Service Assist licensed representative team member may also:
+
+- Assist with inbound customer requests to quote or bind additional coverage on existing policies
+- Attempt to retain the customer when a cancellation request is received","**Service Assist Program:**
+
+- Opt-in, fee-based subscription to assist Farmers® agents with specific service transactions.
+
+**Services Provided:**
+
+- Billing inquiries.
+- Digital enrollment.
+- Policy updates.
+- Agency Dashboard alerts.
+
+**Additional Services (when participating agent is unavailable):**
+
+- Quoting or binding additional coverage on existing policies.
+- Assisting with inbound customer requests to quote or bind additional coverage on existing policies.
+- Attempting to retain the customer when a cancellation request is received."
+Can advoctates combine muliple submission into one for apprval ?,"No, Service Advocates are not able to combine multiple submissions, emailed by the agent for Submit For Approval, into one. It is not possible. In addition, documents sent in for Submit For Approval must be all attached to one email. "," Yes, an advocate can combine multiple submissions into one for approval. 
+How to combine multiple submissions: Find alternate policyAsk if we have a signed request to cancel, if
+soEndorse the policy that will remain with driver and vehicleSubmit endorsement
+Review premium differenceComment as usual
+Cancel the other policy
+Comment as usual, including the policy number this was transferred to","Artcile picked clearly says ""NO""",fail,"**Service Advocates cannot combine multiple submissions into one.**
+
+- Service Advocates cannot combine multiple submissions emailed by the agent for Submit For Approval.",**Service Advocates cannot combine multiple submissions into one for approval.**,"**Here's the reformatted answer:**
+
+- Service Advocates cannot combine multiple submissions emailed by the agent for Submit For Approval into one.
+- All documents sent for Submit For Approval must be attached to a single email.","**Service Advocates cannot combine multiple submissions into one for approval.**
+
+- Service Advocates cannot combine multiple submissions emailed by the agent for Submit For Approval.
+- All documents sent for Submit For Approval must be attached to a single email."
+Can Account Underwriting handle COVERAGE34D ?,Yes,COVERAGE34D - Coverage limit increased - Account Underwriting,Did not answer the question,fail,There is not enough information provided to answer the query.,"There is no information about Account Underwriting or COVERAGE34D in the context you provided. Therefore, I cannot format the answer as requested.","There is no information about Account Underwriting or COVERAGE34D in the context you provided. Therefore, I cannot format the answer as requested.","There is not enough information provided to answer the query. Additionally, there is no information about Account Underwriting or COVERAGE34D in the context you provided. Therefore, I cannot format the answer as requested."
+"When placing an extension, what is the date that I should use?","Extensions are placed from the due date, not the date placed",The extension date should be within 10 days of the next diary date.,Did not find this answer in any article. One of the candid articles has clear answer to the question,fail,"- Extensions are calculated from the due date, not the date the extension was requested.","- Use the due date, not the date placed, when filing an extension.","The context provided does not contain information about the date to be used when placing an extension. Therefore, I cannot answer your question.","- Extensions are calculated from the due date, not the date the extension was requested.
+- Use the due date, not the date placed, when filing an extension."
+How do I fix the issue where the Agent cannot enter a payment through their ACA?,"Resolution
+	First, attempt to use the agent's district manager's agent code.
+	The district manager's agent code will be the same besides the last two digits, which will be 01.
+o	Example: Agent = 45-32-31                 District Manager = 45-32-01
+	For Inactive agents, Express should replace the agent code with one of the generic ACA codes below.
+	If this has not happened, and the Inactive agents ACA still shows on the billing side of express, please refer for defect 724086. 
+	If this does not correct the issue, use one of the ACA codes below and notate the billing account on what code was used for payment:
+o	Western Zone  29-99-375
+o	Eastern Zone  04-99-375
+	Note: Please make sure to document which ACA code you use in your billing comment so the payment can be located if necessary.
+"," First, attempt to use the agent's district manager's agent code. The district manager's agent code will be the same besides the last two digits, which will be 01.
+If this does not work, use one of the generic ACA codes below and notate the billing account on what code was used for payment:
+Western Zone  29-99-375
+Eastern Zone  04-99-375",Incomplete information,fail,"**Here's the formatted answer:**
+
+If you encounter the pop-up message:
+
+- ""Agent Credit Advice processing authority has been revoked. Contact your Service Center for assistance. (E84229) Are you sure?""
+
+Or the error message:
+
+- ""Agent Identification number not on file"" (E84178)
+
+It means you might not be able to process the ACA payment.","**To resolve the issue where the Agent cannot enter a payment through their ACA, follow these steps:**
+
+1. Check if the agent code is valid and on file.
+ - If invalid or not on file, contact your Service Center for assistance.
+
+
+2. Ensure that the agent is not dual-licensed.
+ - If dual-licensed, contact your Service Center to resolve the issue.
+
+
+3. Verify that the agent has set up their ACA/Farmers Bank Account.
+ - If not set up, do so before entering payments through ACA.
+
+
+**After completing these steps, the agent should be able to enter payments through their ACA without issues.**","**Steps to Resolve Payment Entry Issues in ACA:**
+
+1. **Try the District Manager's Agent Code:**
+   - Use the district manager's agent code, which is the same as the agent's code except for the last two digits (01).
+   - Example: Agent code = 45-32-31, District Manager code = 45-32-01.
+
+2. **Use Generic ACA Codes (if Agent is Inactive):**
+   - If the agent is inactive, use one of the generic ACA codes provided:
+     - Western Zone - 29-99-375
+     - Eastern Zone - 04-99-375
+   - Document the ACA code used in your billing comment for easy payment tracking.
+
+3. **Contact Service Operations Direct Services:**
+   - If the issue persists, contact Service Operations Direct Services at 1-888-327-6335 for further assistance.","**Steps to Resolve Payment Entry Issues in ACA:**
+
+1. Check if the agent code is valid and on file.
+ - If invalid or not on file, contact your Service Center for assistance.
+
+
+2. Ensure that the agent is not dual-licensed.
+ - If dual-licensed, contact your Service Center to resolve the issue.
+
+
+3. Verify that the agent has set up their ACA/Farmers Bank Account.
+ - If not set up, do so before entering payments through ACA.
+
+
+4. **Try the District Manager's Agent Code:**
+   - Use the district manager's agent code, which is the same as the agent's code except for the last two digits (01).
+   - Example: Agent code = 45-32-31, District Manager code = 45-32-01.
+
+5. **Use Generic ACA Codes (if Agent is Inactive):**
+   - If the agent is inactive, use one of the generic ACA codes provided:
+     - Western Zone - 29-99-375
+     - Eastern Zone - 04-99-375
+   - Document the ACA code used in your billing comment for easy payment tracking.
+
+6. **Contact Service Operations Direct Services:**
+   - If the issue persists, contact Service Operations Direct Services at 1-888-327-6335 for further assistance."
+How do I a complete an Auto Change Form in CLS?,"Modify Control screen:
+1.	Type 2 - change  in the Operation field and 12-Policy Date at Issue in the Starting Point in the starting point field. Press Enter to continue
+Policy Date for Issue screen:
+2.	Type 8 - Forms Pull List in the Option field, press enter
+Optional Forms screen:
+3.	Locate the E4277  Policy Changes form, Type A  Add, press enter
+Variable Forms Completion Data screen:
+4.	Enter through all policy forms until reaching the E4277  Policy Changes form. 
+a.	While entering, confirm all forms required for printing have been selected, this will be reflected with an X.  If a form was not automatically selected type x next to the form number and continue entering until reaching the E4277 screen as shown below.
+5.	Reference the Consistent Wording Collection Page to determine the appropriate transaction type and wording
+6.	Type X under the correct description of operations that matches the transaction type be performed.
+7.	Enter until reaching the Description of Changes fields
+	Type the description of change using the consistent wording from step 5.
+	NOTE: Consistent wording for some transactions may not be referenced in the Consistent Wording.  If this occurs, please use sound judgment in wording, or reach out to local floor support for guidance.
+	Each field has a 65 character limitation.  This is noted on the bottom right corner of the screen. If the number of characters exceeds allowable space, verbiage will be cut off during the document print process.
+	Always place cursor on the last character typed to confirm you have not gone past the 65 character limit.
+8.	Press PF9  to reach the Policy Data for Issue screen
+9.	Tab to the Data Option field and Type 1 and then select Enter to continue. This will take you back to the Modify Control screen.
+Modify Control screen:
+10.	Type 9  Exit in the option field, press enter
+Modification Control screen:
+11.	Verify status of Bypass Und. 
+a.	If Bypass Und is blank, Enter 1 at Starting Point and type U next to Bypass Und., press Enter through the Mailing/Billing screens until back at the Modification Control screen
+ 
+Policy Premium Recap screen:
+12.	To submit the change at the bottom of the screen type 9, press enter. 
+13.	On the premium recap screen confirm the premium adjustment is accurate. Press Enter 
+a.	Note: The premium recap screen will look di9fferent based on if there is a premium change or no premium change
+
+IF PROVIDING A QUOTE ONLY, NOT SUBMITTING THE CHANGE: after noting the premium change, STOP do not push the change through! Tab to the bottom and input OPTION 1 = SUSPND to suspend the change and follow Multi-Line: CLS Processing & Navigation - How do I delete a Work In Progress (WIP)? To delete.
+ 
+Disposition screen:
+13.	On the Disposition screen complete the following information:
+	Policy Documents and SCHED Print options  Entry is subject to what is outlined in the Consistent Wording Chapters. Consistent Wording Collection Page
+	Renewal Option Prefilled with A-Automatic or U-Underwritten
+	Note: User can override with U if policy requires underwriting review at renewal due to findings during review of requested change. Follow Multi-Line: Flagging Policies for Review at Renewal - How to Set a D Disposition in CLS and Multi-Line: Flagging Policies for Review at Renewal - How to Set a Caution Code in CLS
+15.	Press Enter to complete the transaction
+16.	In SRM write your comments and select the checkbox for Policy System so the comments are copied into the journal comments. Multi-Line: Journal Guidelines & Abbreviations - What information should be documented in the Policy Service Journal? "," To complete an Auto Change Form in CLS, follow these steps:
+
+1. Select OPERATION 2 and STARTING POINT 4  Policy Level Coverages (S842 screen).
+
+
+2. Enter UM/UIM limits based on the state where coverage exists. 
+
+
+3. Submit:Once changes are complete, follow the steps in: Auto: Completing Change Form and Disposition in CLS  or Completing Change Form and Disposition if changes are being made to a policy with GL or Property coverage, in order to complete the change.
+
+
+4. Use Consistent Wording Collection Page for completing the E4277.
+
+
+5. Be sure to leave appropriate Journal comments including the Service Request number and the change that was processed.",It used article kaD4T000000XbXwUAK but this is for UM/UIM and not the auto change form,fail,"**To complete an Auto Change Form in CLS, follow these steps:**
+
+1. Refer to the guide: Auto: Completing Change Form and Disposition in CLS.
+2. Follow the instructions provided in the guide to complete the form.","To complete an Auto Change Form in CLS, follow these steps:
+
+- Log in to CLS.
+- Click on the ""My Account"" tab.
+- Under the ""Personal Information"" section, click on the ""Auto Change Form"" link.
+- Fill out the form with the required information.
+- Click on the ""Submit"" button.
+
+Your Auto Change Form will be processed within 24 hours.","To complete an Auto Change Form in CLS, follow these steps:
+
+- Log in to CLS.
+- Click on the ""My Account"" tab.
+- Under the ""Personal Information"" section, click on the ""Auto Change Form"" link.
+- Fill out the form with the required information.
+- Click on the ""Submit"" button.
+
+Your Auto Change Form will be processed within 24 hours.","**To complete an Auto Change Form in CLS, follow these steps:**
+
+1. Log in to CLS.
+2. Click on the ""My Account"" tab.
+3. Under the ""Personal Information"" section, click on the ""Auto Change Form"" link.
+4. Fill out the form with the required information.
+5. Click on the ""Submit"" button.
+
+Your Auto Change Form will be processed within 24 hours.
+
+**Additional notes:**
+
+- Refer to the guide: Auto: Completing Change Form and Disposition in CLS.
+- Follow the instructions provided in the guide to complete the form."
+What is metcheck?,Exception Refund (MetCheck)	A paper check refund that a remittance associate processes manually.," Metcheck is a system used by Farmers Insurance to track the status of disbursements. Disbursements are payments made to customers, such as refunds or claims. Metcheck allows customer service agents to track the status of these payments and provide customers with updates.  It shows the history of the disbursement, including the amount, the date it was issued, the method of payment, and the status of the payment. ",Information not found in article,fail,"MetCheck is a refund system used by Agent360.
+
+Here's a breakdown of the key points:
+
+- MetCheck is a refund system.
+- It is used by Agent360.","**Metcheck**
+
+- A service used to issue paper refunds.","**Metcheck:**
+
+- A paper check used for disbursement when automated disbursement fails.
+- Printed in Scranton, PA, as Remittance doesn't have its own check stock.
+- Automated disbursements are held for 10 calendar days in Agent360 for billing before being sent to Metcheck for printing and mailing.","**MetCheck**
+
+- A refund system used by Agent360.
+- Issues paper refunds.
+- Used when automated disbursement fails.
+- Printed in Scranton, PA, as Remittance doesn't have its own check stock.
+- Automated disbursements are held for 10 calendar days in Agent360 for billing before being sent to Metcheck for printing and mailing."
+What do I do if Returned mail doesn't contain a policy or account number?,"Search the returned document for any insured information, such as a valid policy, account number, or address.
+Use Agency Dashboard to research for policy info.  Direct Bill Inquiry can also be used to look up account numbers (F numbers).
+If you cannot find either number, make comments in the SR and then close with this comment: 
+RECEIVED RETURNED MAIL. CANNOT LOCATE POLICY OR ACCOUNT NUMBER. CLOSING SR."," Make comments in the SR and then close SR.
+SR Comment: RECEIVED SR CONTAINING NON-ACTION ITEM OR BLANK REQUEST. CLOSING SR.",Missed first 2 points from kaD4T000000Xh5zUAC,fail,"**Steps to take if the SR doesn't contain a policy or account number:**
+
+1. Search the returned document for any insured information, such as a valid policy, account number, or address.
+2. Use Agency Dashboard to research for policy information.
+3. If you find any insured information, send an email to the agent of record.","**To find the policy or account number if the returned mail doesn't contain it:**
+
+- Search the returned document for any insured information, such as a valid policy, account number, or address.
+- If you can't find the information in the document, use the Agency Dashboard to research for policy information.","To determine the policy status if the returned mail doesn't contain a policy or account number:
+
+- Open the desired Session (West, East, or Texas).
+- Enter 11 followed by the policy number.
+- Press Enter.","**Steps to take if the SR doesn't contain a policy or account number:**
+
+1. Search the returned document for any insured information, such as a valid policy, account number, or address.
+2. Use Agency Dashboard to research for policy information.
+3. If you find any insured information, send an email to the agent of record.
+
+**To determine the policy status if the returned mail doesn't contain a policy or account number:**
+
+- Open the desired Session (West, East, or Texas).
+- Enter 11 followed by the policy number.
+- Press Enter."

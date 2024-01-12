@@ -5,8 +5,8 @@ import pandas as pd
 llm = LLM()
 
 # File paths
-jsonl_file_path = './data/results/sampled_eval_doc_search.jsonl'  # Adjusted file path for the assistant's file system
-csv_file_path = './data/input/sampled_eval.csv'
+jsonl_file_path = './data/results/eval_doc_search.jsonl'  # Adjusted file path for the assistant's file system
+csv_file_path = './data/input/eval.csv'
 output_csv_path = './data/results/exp_2.csv'
 joined_csv_path = './data/results/exp_2_joined.csv'
 excel_output_path = './data/results/exp_2_joined.xlsx'
@@ -28,6 +28,7 @@ for query_result in query_results:
     ans = llm.find_answer(query, context)
     data.append({
             'question': query_result.query,
+            'brand': query_result.brand,
             'ans_exp_2': llm.format_answer(ans)
         })
 

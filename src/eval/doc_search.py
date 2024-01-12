@@ -18,8 +18,8 @@ def process_csv_and_write_jsonl(csv_file_path, jsonl_file_path):
                 writer.write(search_result)
 
 # Define file paths
-csv_file_path = './data/input/sampled_eval.csv'
-jsonl_file_path = './data/results/sampled_eval_doc_search.jsonl'
+csv_file_path = './data/input/eval.csv'
+jsonl_file_path = './data/results/eval_doc_search.jsonl'
 
 # Process the CSV file and write to a JSONL file
 process_csv_and_write_jsonl(csv_file_path, jsonl_file_path)

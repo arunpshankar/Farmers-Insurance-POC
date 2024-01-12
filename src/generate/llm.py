@@ -29,7 +29,7 @@ class LLM:
             model = ChatVertexAI(
                 model_name=config.TEXT_GEN_MODEL_NAME,
                 temperature=0.1,
-                max_output_tokens=1024,
+                max_output_tokens=2048,
                 verbose=True
             )
             logger.info("Chat model loaded successfully.")
@@ -49,7 +49,7 @@ class LLM:
         Returns:
             Optional[str]: The model's response or None if an error occurred.
         """
-        task = "Given a query and context, identify the answer to the query within the provided context."
+        task = "Given a query and context, identify the answer within the provided context. Please provide a detailed answer with all the steps."
         logger.info(f'Query = {query}')
         try:
             human_template = "{task}\\nnQuery:\n{query}\n\nContext:\n{context}\n\nAnswer:"
@@ -67,15 +67,35 @@ class LLM:
     def format_answer(self, answer: str) -> str:
         """
         Given an answer, clean the answer by removing the citations and formatting it to be clear and readable.
-        
         """
-        task = "Given an answer, format it by removing citations, breaking it down into steps or points, and ensuring it is clean and easy to read."
-        logger.info('Formatting generated answer')
+        task = """Format the provided answer by removing any citations, breaking it down into manageable steps or points, and ensuring it's clear and easy to read. 
+        Remove all types of citations like [1], [1, 3]."""
+        logger.info('Formatting generated answer...')
         try:
             human_template = "{task}\\nnAnswer:\n{answer}\n\nFormatted Answer:"
             human_message = HumanMessagePromptTemplate.from_template(human_template)
             chat_template = ChatPromptTemplate.from_messages([human_message])
             prompt = chat_template.format_prompt(task=task, answer=answer).to_messages()
+            response = self.model(prompt)
+            completion = response.content
+            return completion.strip()
+        except Exception as e:
+            logger.error(f"Error during model prediction: {e}")
+            return None
+        
+    
+    def coalesce_answer(self, answers: str) -> str:
+        """
+        Given various answers to a question, combine them to retain all unique points and steps in the correct order.
+        """
+        task = """Given multiple answers to a question, compile them to maintain all unique points and steps in the correct sequence. 
+Be sure to remove any extraneous sentences at the beginning of the answers, such as "formatted answer" or "sure, here is the formatted answer," and so on."""
+        logger.info('Coalescing answers...')
+        try:
+            human_template = "{task}\\nnAnswers:\n{answers}\n\Combined Answer:"
+            human_message = HumanMessagePromptTemplate.from_template(human_template)
+            chat_template = ChatPromptTemplate.from_messages([human_message])
+            prompt = chat_template.format_prompt(task=task, answers=answers).to_messages()
             response = self.model(prompt)
             completion = response.content
             return completion.strip()
