@@ -1,7 +1,7 @@
 question,expected_ans,article_id,filter,matched_articles,predicted_ans,reason,pass_fail
 How to reinstate policy if cancelled mid-term?,"If policy is cancelled mid-term: insured has 10 days to reinstate without a lapse
 insured has an additional 10 days to reinstate with a lapse (reinstatement fee will apply)
-See the cancel invoice for the dates and details",kaD4T000000XmdlUAC,FSA,"kaD4T0000004N2iUAE,kaD4T0000008V52UAE,kaD4T0000009deUUAQ,kaD4T0000008nheUAA,kaD4T0000008YpEUAU"," To reinstate a policy that has been cancelled mid-term, you will need to contact your insurance company as soon as possible. 
+See the cancel invoice for the dates and details",kaD4T000000XmdlUAC,Farmers Specialty Auto,"kaD4T0000004N2iUAE,kaD4T0000008V52UAE,kaD4T0000009deUUAQ,kaD4T0000008nheUAA,kaD4T0000008YpEUAU"," To reinstate a policy that has been cancelled mid-term, you will need to contact your insurance company as soon as possible. 
 They will be able to walk you through the process and let you know what documentation and information you will need to provide. 
 In general, you will need to pay the full amount of the premium that was due at the time of cancellation, as well as any late fees or other charges that may have been incurred. 
 You may also need to provide proof of insurability, such as a new driver's license or a medical exam. 
@@ -31,7 +31,7 @@ o	When the refund is issuing the same and the payment needs to be transferred bu
 7.	Refer SR
 8.	Process can take 1-2 business days
 	How long does it take to void and reissue a refund check?
-",kaD4T000000Cnw2UAC,Bristol_West,"kaD4T000000XhogUAC,kaD4T000000CnsjUAC,kaD4T000000Xif9UAC,kaD4T000000Cnw2UAC,kaD4T000000XfWVUA0"," To stop payment on a refund check, you will need to: 
+",kaD4T000000Cnw2UAC,Bristol West,"kaD4T000000XhogUAC,kaD4T000000CnsjUAC,kaD4T000000Xif9UAC,kaD4T000000Cnw2UAC,kaD4T000000XfWVUA0"," To stop payment on a refund check, you will need to: 
 
 1. Advise the agent or named insured not to attempt to cash the original check. 
 2. Process Void Stop pay request via Mellon Bank. 
@@ -67,7 +67,7 @@ Pennsylvania:
 3722955
 3722355
 Texas
-Currently there are no restricted agents in Texas",kaD4T000000POlbUAG,Bristol_West,"kaD4T000000POlbUAG,kaD4T000000Xh5rUAC,kaD4T0000008oCsUAI,kaD4T0000004SnOUAU,kaD4T000000L1qPUAS"," California:
+Currently there are no restricted agents in Texas",kaD4T000000POlbUAG,Bristol West,"kaD4T000000POlbUAG,kaD4T000000Xh5rUAC,kaD4T0000008oCsUAI,kaD4T0000004SnOUAU,kaD4T000000L1qPUAS"," California:
 04036610461120047091404938490479074
 Florida:
 099190109452040910271099006809102460910784094255109439450940190091040009913440990702
@@ -121,7 +121,7 @@ Comments should include:
 	Premium changes
 	Full Term Premium
 	Any payment amounts, refunds, due dates provided
-",kaD4T000000TNE4UAO,FSA,"kaD4T0000008Uy1UAE,kaD4T000000TNE4UAO,kaD4T0000004ablUAA,kaD4T0000004EK1UAM,kaD4T0000008VjNUAU"," To remove a vehicle from the policy, follow these steps:
+",kaD4T000000TNE4UAO,Farmers Specialty Auto,"kaD4T0000008Uy1UAE,kaD4T000000TNE4UAO,kaD4T0000004ablUAA,kaD4T0000004EK1UAM,kaD4T0000008VjNUAU"," To remove a vehicle from the policy, follow these steps:
 
 1. Log into BWProducers.com
 2. Hover over 'Manage my Customers'
@@ -143,12 +143,12 @@ Customer received an expired Credit Card Letter,"Approximately 5-6K letters mail
 
 Going forward, an Expired CC Outbound dialer will notify customers (approximately 1000 a month) that the credit card is about to expire. (If the expiration date is not updated the payment will decline.)
 
-If there are any questions, please contact a Supervisor.",kaD4T000000PL2hUAG,Farmers_Hawaii,"kaD4T000000PL2hUAG,kaD4T000000PGL5UAO,kaD4T000000PGatUAG,kaD4T000000PGb0UAG,kaD4T000000PG5bUAG"," This was a one-time clean up mailing for all customers who had or have an upcoming credit card expiration. The company advised in the letter for the customer to disregard the notice if the insured has already provided updated information. Due to data limitations, the company was not able to verify if customers banking information was recently updated. If customer questions why a letter was received, apologize and advise the customer to disregard. ",Missed few points but answered the question,partial pass
+If there are any questions, please contact a Supervisor.",kaD4T000000PL2hUAG,Farmers HI,"kaD4T000000PL2hUAG,kaD4T000000PGL5UAO,kaD4T000000PGatUAG,kaD4T000000PGb0UAG,kaD4T000000PG5bUAG"," This was a one-time clean up mailing for all customers who had or have an upcoming credit card expiration. The company advised in the letter for the customer to disregard the notice if the insured has already provided updated information. Due to data limitations, the company was not able to verify if customers banking information was recently updated. If customer questions why a letter was received, apologize and advise the customer to disregard. ",Missed few points but answered the question,partial pass
 Where can I see if a service charge is being applied?,"The Installment Schedule screen displays the amount due by policy with each future installment in the current term, and how the amount was determined by policy. The schedule only displays future installments and does not include any current amounts or historical data. Working in conjunction with the Transaction Breakdown screen, which presents the current and historical data, these two screens provide a complete picture of the account by showing what has been billed, what is currently due today, and what will bill in the future.
 
 The Installment Schedule displays the future schedule as of today and is subject to changes as account and policy-level changes are made.",kaD4T000000H69QUAS,Commercial,"kaD4T0000008XjEUAU,kaD4T000000Gyi9UAC,kaD1L000000GtSAUA0,kaD4T000000HJaXUAW,kaD4T000000XaYeUAK"," The Declarations Page will show the Fire Department Service Charge 
 and any additional coverages. ",The answer is clear for Fire Dpt Service Changes. There is another article talks about service chargers,partial pass
-What is teh MCO for state of New York ?," 41, 42, 46",kaD4T00000008TmUAI,Bristol_West,"kaD4T000000TO95UAG,kaD4T00000008TmUAI,kaD4T000000CnsnUAC,kaD4T0000004ZxHUAU,kaD4T000000XiX5UAK"," The MCO for the state of New York is 41.
+What is teh MCO for state of New York ?," 41, 42, 46",kaD4T00000008TmUAI,Bristol West,"kaD4T000000TO95UAG,kaD4T00000008TmUAI,kaD4T000000CnsnUAC,kaD4T0000004ZxHUAU,kaD4T000000XiX5UAK"," The MCO for the state of New York is 41.
 ","Article ""kaD4T00000008TmUAI"" has 3 MCO for state of NY. Answer only listed first MCO",partial pass
 Can I cancel a Foremost policy by Chat?,Any variations of yes,kaD4T000000XbrhUAC,Specialty,"kaD4T000000XbrhUAC,kaD4T000000XbiGUAS,kaD4T000000XmLCUA0,kaD4T000000XnffUAC,kaD4T0000009ThgUAE"," Yes, First and Second named insureds or individuals with control, including additional named insureds, POAs and EOEs are allowed to verbally cancel any product in any state (Except Delaware). 
 Louisiana Special Process: The state of Louisiana requires a written request to be documented as part of the policy record. 
@@ -246,14 +246,14 @@ What Tasks does the Service Assist Program assist with?,"	Billing inquiries
 - Getting policy documents
 - Transferring policies
 - Cancelling policies",Generic answer,fail
-Can advoctates combine muliple submission into one for apprval ?,"No, Service Advocates are not able to combine multiple submissions, emailed by the agent for Submit For Approval, into one. It is not possible. In addition, documents sent in for Submit For Approval must be all attached to one email. ",kaD4T0000008W5IUAU,FSA,"kaD4T0000008W5IUAU,kaD4T0000008V1eUAE,kaD4T0000008UE8UAM,kaD4T0000008T9ZUAU,kaD4T0000008VYnUAM"," Yes, an advocate can combine multiple submissions into one for approval. 
+Can advoctates combine muliple submission into one for apprval ?,"No, Service Advocates are not able to combine multiple submissions, emailed by the agent for Submit For Approval, into one. It is not possible. In addition, documents sent in for Submit For Approval must be all attached to one email. ",kaD4T0000008W5IUAU,Farmers Specialty Auto,"kaD4T0000008W5IUAU,kaD4T0000008V1eUAE,kaD4T0000008UE8UAM,kaD4T0000008T9ZUAU,kaD4T0000008VYnUAM"," Yes, an advocate can combine multiple submissions into one for approval. 
 How to combine multiple submissions: Find alternate policyAsk if we have a signed request to cancel, if
 soEndorse the policy that will remain with driver and vehicleSubmit endorsement
 Review premium differenceComment as usual
 Cancel the other policy
 Comment as usual, including the policy number this was transferred to","Artcile picked clearly says ""NO""",fail
 Can Account Underwriting handle COVERAGE34D ?,Yes,kaD1L000000PDsJUAW,Farmers,"kaD4T000000XlAPUA0,kaD4T000000XipXUAS,kaD1L000000PSQ7UAO,kaD4T000000Xi9MUAS,kaD4T000000KzGWUA0",COVERAGE34D - Coverage limit increased - Account Underwriting,Did not answer the question,fail
-"When placing an extension, what is the date that I should use?","Extensions are placed from the due date, not the date placed",kaD4T0000004dpNUAQ,FSA,"kaD4T0000004dpNUAQ,kaD4T0000008VapUAE,kaD4T0000008UGzUAM,kaD4T0000008nzZUAQ,kaD4T0000008WJBUA2",The extension date should be within 10 days of the next diary date.,Did not find this answer in any article. One of the candid articles has clear answer to the question,fail
+"When placing an extension, what is the date that I should use?","Extensions are placed from the due date, not the date placed",kaD4T0000004dpNUAQ,Farmers Specialty Auto,"kaD4T0000004dpNUAQ,kaD4T0000008VapUAE,kaD4T0000008UGzUAM,kaD4T0000008nzZUAQ,kaD4T0000008WJBUA2",The extension date should be within 10 days of the next diary date.,Did not find this answer in any article. One of the candid articles has clear answer to the question,fail
 How do I fix the issue where the Agent cannot enter a payment through their ACA?,"Resolution
 	First, attempt to use the agent's district manager's agent code.
 	The district manager's agent code will be the same besides the last two digits, which will be 01.
@@ -264,7 +264,7 @@ o	Example: Agent = 45-32-31                 District Manager = 45-32-01
 o	Western Zone  29-99-375
 o	Eastern Zone  04-99-375
 	Note: Please make sure to document which ACA code you use in your billing comment so the payment can be located if necessary.
-",kaD4T0000008W8WUAU,FSA,"kaD4T0000008W8WUAU,kaD4T0000008W8RUAU,kaD4T000000L2REUA0,kaD4T0000008VRoUAM,kaD4T0000008mq9UAA"," First, attempt to use the agent's district manager's agent code. The district manager's agent code will be the same besides the last two digits, which will be 01.
+",kaD4T0000008W8WUAU,Farmers Specialty Auto,"kaD4T0000008W8WUAU,kaD4T0000008W8RUAU,kaD4T000000L2REUA0,kaD4T0000008VRoUAM,kaD4T0000008mq9UAA"," First, attempt to use the agent's district manager's agent code. The district manager's agent code will be the same besides the last two digits, which will be 01.
 If this does not work, use one of the generic ACA codes below and notate the billing account on what code was used for payment:
 Western Zone  29-99-375
 Eastern Zone  04-99-375",Incomplete information,fail
@@ -320,7 +320,7 @@ Disposition screen:
 
 
 5. Be sure to leave appropriate Journal comments including the Service Request number and the change that was processed.",It used article kaD4T000000XbXwUAK but this is for UM/UIM and not the auto change form,fail
-What is metcheck?,Exception Refund (MetCheck)	A paper check refund that a remittance associate processes manually.,kaD4T000000XnbWUAS,FWS,"kaD4T000000XnbWUAS,kaD4T000000HK5pUAG,kaD4T000000PMhiUAG,kaD4T000000PLUMUA4,kaD4T0000004dHaUAI"," Metcheck is a system used by Farmers Insurance to track the status of disbursements. Disbursements are payments made to customers, such as refunds or claims. Metcheck allows customer service agents to track the status of these payments and provide customers with updates.  It shows the history of the disbursement, including the amount, the date it was issued, the method of payment, and the status of the payment. ",Information not found in article,fail
+What is metcheck?,"Exception Refund (MetCheck)	A paper check refund that a remittance associate processes manually.",kaD4T000000XnbWUAS,FWS,"kaD4T000000XnbWUAS,kaD4T000000HK5pUAG,kaD4T000000PMhiUAG,kaD4T000000PLUMUA4,kaD4T0000004dHaUAI"," Metcheck is a system used by Farmers Insurance to track the status of disbursements. Disbursements are payments made to customers, such as refunds or claims. Metcheck allows customer service agents to track the status of these payments and provide customers with updates.  It shows the history of the disbursement, including the amount, the date it was issued, the method of payment, and the status of the payment. ",Information not found in article,fail
 What do I do if Returned mail doesn't contain a policy or account number?,"Search the returned document for any insured information, such as a valid policy, account number, or address.
 Use Agency Dashboard to research for policy info.  Direct Bill Inquiry can also be used to look up account numbers (F numbers).
 If you cannot find either number, make comments in the SR and then close with this comment: 
