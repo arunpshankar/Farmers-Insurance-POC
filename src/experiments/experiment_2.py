@@ -1,6 +1,7 @@
 from src.experiments.retrieve import read_jsonl_file
 from src.utils.io import save_to_excel
 from src.config.logging import logger
+from src.utils.io import save_to_csv
 from src.generate.llm import LLM
 from typing import List, Dict
 import pandas as pd
@@ -42,14 +43,6 @@ def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
     except Exception as e:
         logger.error(f"Error combining dataframes: {e}")
         return pd.DataFrame()
-
-def save_to_csv(df: pd.DataFrame, file_path: str):
-    """ Saves DataFrame to a CSV file. """
-    try:
-        df.to_csv(file_path, index=False)
-        logger.info(f"DataFrame saved as CSV at {file_path}")
-    except Exception as e:
-        logger.error(f"Error saving CSV file: {e}")
 
 
 def main():

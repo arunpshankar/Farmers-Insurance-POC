@@ -14,3 +14,12 @@ def save_to_excel(df: pd.DataFrame, file_path: str):
         logger.info(f"DataFrame saved as Excel file at {file_path}")
     except Exception as e:
         logger.error(f"Error saving Excel file: {e}")
+
+
+def save_to_csv(df: pd.DataFrame, file_path: str):
+    """ Saves DataFrame to a CSV file. """
+    try:
+        df.to_csv(file_path, index=False)
+        logger.info(f"DataFrame saved as CSV at {file_path}")
+    except Exception as e:
+        logger.error(f"Error saving CSV file: {e}")
