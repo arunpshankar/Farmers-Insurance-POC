@@ -1,5 +1,8 @@
-import pandas as pd 
+from src.utils.io import save_to_excel
+from src.utils.io import save_to_csv
 from src.generate.llm import LLM
+import pandas as pd 
+
 
 def merge_answers(df: pd.DataFrame) -> list:
     """ Merges answers from different columns of a DataFrame into a single list. """
@@ -14,19 +17,6 @@ def coalesce_answers(merged_answers: list, llm: LLM) -> list:
     """ Coalesces merged answers using the provided language model. """
     return [llm.coalesce_answer(ans) for ans in merged_answers]
 
-def save_to_csv(df: pd.DataFrame, file_path: str):
-    """ Saves DataFrame to a CSV file. """
-    df.to_csv(file_path, index=False)
-    print(f"DataFrame saved as CSV at {file_path}")
-
-def save_to_excel(df: pd.DataFrame, file_path: str):
-    """ Saves DataFrame to an Excel file with wrapped text. """
-    with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
-        df.to_excel(writer, index=False, sheet_name='Results')
-        worksheet = writer.sheets['Results']
-        for idx, _ in enumerate(df):
-            worksheet.set_column(idx, idx, 20, writer.book.add_format({'text_wrap': True}))
-    print(f"DataFrame saved as Excel file at {file_path}")
 
 def main():
     llm = LLM()

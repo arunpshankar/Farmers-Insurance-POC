@@ -1,3 +1,6 @@
+from src.utils.io import save_to_excel
+from src.config.logging import logger
+from src.utils.io import save_to_csv
 import pandas as pd
 
 def load_csv(file_path: str) -> pd.DataFrame:
@@ -5,7 +8,7 @@ def load_csv(file_path: str) -> pd.DataFrame:
     try:
         return pd.read_csv(file_path)
     except Exception as e:
-        print(f"Error loading CSV file {file_path}: {e}")
+        logger.info(f"Error loading CSV file {file_path}: {e}")
         return pd.DataFrame()
 
 def combine_dataframes_columnwise(dfs: list) -> pd.DataFrame:
@@ -14,25 +17,6 @@ def combine_dataframes_columnwise(dfs: list) -> pd.DataFrame:
     # Removing duplicate columns
     return combined_df.loc[:, ~combined_df.columns.duplicated()]
 
-def save_to_csv(df: pd.DataFrame, file_path: str):
-    """ Saves DataFrame to a CSV file. """
-    try:
-        df.to_csv(file_path, index=False)
-        print(f"DataFrame saved as CSV at {file_path}")
-    except Exception as e:
-        print(f"Error saving CSV file: {e}")
-
-def save_to_excel(df: pd.DataFrame, file_path: str):
-    """ Saves DataFrame to an Excel file with wrapped text. """
-    try:
-        with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
-            df.to_excel(writer, index=False, sheet_name='Results')
-            worksheet = writer.sheets['Results']
-            for idx, _ in enumerate(df):
-                worksheet.set_column(idx, idx, 20, writer.book.add_format({'text_wrap': True}))
-        print(f"DataFrame saved as Excel file at {file_path}")
-    except Exception as e:
-        print(f"Error saving Excel file: {e}")
 
 def main():
     """ Main function to execute the script tasks. """
