@@ -1,73 +1,88 @@
-# Farmers Insurance POC
+# Farmers Insurance POC: Project Setup Guide
 
-## 🚀 Getting Started
+This guide provides detailed instructions for setting up and running the project effectively.
 
-Welcome to the Farmers Insurance POC repository. This guide will walk you through setting up and running the project.
+## Development Environment
 
-### 🛠️ Development Environment 
+- **Python Version**: Ensure Python 3.8 or higher is installed (3.9 or higher recommended for optimal performance).
+- **IDE Recommendation**: Visual Studio Code is suggested, but feel free to use any IDE of your preference.
 
-- **Python Version**: 3.8+ (3.9+ recommended for optimal performance)
-- **Recommended IDE**: Visual Studio Code or any other IDE you prefer
+## Setup Instructions
 
-### Setup Instructions
+### 1. Clone the Repository
+Execute the following command in your terminal:
+```bash
+git clone https://github.com/arunpshankar/Farmers-Insurance-POC.git
+```
 
-#### 1. Clone the Repository:
-   ```bash
-   git clone https://github.com/arunpshankar/Farmers-Insurance-POC.git
-   ```
+### 2. Project Directory
+Change into the cloned directory:
+```bash
+cd Farmers-Insurance-POC
+```
 
-#### 2. Navigate to the Project Directory:
-   ```bash
-   cd Farmers-Insurance-POC
-   ```
+### 3. Virtual Environment (Optional, but Recommended)
+Set up and activate a virtual environment:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-#### 3. Set Up Virtual Environment (Optional but recommended):
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+### 4. Install Dependencies
+Install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
 
-#### 4. Install Dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 5. Update PYTHONPATH
+Add the project directory to your PYTHONPATH:
+```bash
+export PYTHONPATH=$PYTHONPATH:.
+```
 
-#### 5. Update Your PYTHONPATH:
-   ```bash
-   export PYTHONPATH=$PYTHONPATH:.
-   ```
+### 6. Google Cloud Platform (GCP) Credentials
+Generate service account credentials for your GCP project, download the JSON key, and place it in the project's `credentials/` folder at the root directory.
 
 ## Document Index Setup
-Before running valuations, ensure to set up the document index with data provided by Farmers Insurance.
+Ensure the document index is prepared with necessary data for evaluation as instructed by the PSO team.
 
-- Once the document index is created, modify `config/config.yml` to update the index ID (datastore ID).
+- Modify `config/config.yml` to update the datastore ID with the newly created index ID.
 
-## Instructions to Run Evaluation
+## Running Evaluations
 
-1. **Perform Search Over Indexed Documents Using Vertex AI Search**:
-   Navigate to `./data/input` which contains the evaluation set (`eval.csv` and `sampled_eval.csv`). Start with `sampled_eval.csv` for initial testing.
+### 1. Search Indexed Documents
+Navigate to `./data/input` for the evaluation set (`eval.csv` and `sampled_eval.csv`). Start with `sampled_eval.csv` for dry run.
 
-   Run the script:
-   ```bash
-   ./eval/doc_search.py
-   ```
-   This initiates a search over the index and captures results in a JSONL file.
+Execute the script:
+```bash
+Python src/eval/doc_search.py
+```
+This script initiates a search over the index, capturing results in a JSONL file.
 
-2. **Review Search Results**:
-   Check `data/results/eval_doc_search.jsonl` for the search results.
+### 2. Review Search Results
+Examine the results in `data/results/eval_doc_search.jsonl`.
 
-3. **Conduct Experiments**:
-   Leverage the search results and summarized answers with citations to perform various experiments:
-   - **Experiment 1**: Uses only the summarized answer from Vertex AI search.
-   - **Experiment 2**: Utilizes extractive answers from cited documents.
-   - **Experiment 3**: Similar to Experiment 2, but uses extractive segments from matched documents, then passes these to the LLM alongside the query for an answer.
+### 3. Conduct Experiments
+Perform various experiments using the search results:
 
-   Run any of these experiments to derive answers in various styles. The answers tend to get more detailed from Experiment 1 to 3 due to growing context.
+- **Experiment 1**: Direct summarized answers from Vertex AI Search.
+- **Experiment 2**: Utilizes extractive answers from cited documents and refines them with LLM.
+- **Experiment 3**: Similar to Experiment 2, but uses extractive segments and further refines them with the LLM.
 
-4. **Consolidate and Format Final Answers**:
-   The generated answers are then consolidated and coalesced into a formatted final version.
+Run these scripts for respective experiments:
+```bash
+python src/experiments/experiment_1.py
+python src/experiments/experiment_2.py
+python src/experiments/experiment_3.py
+```
+
+### 4. Consolidate and Format Final Answers
+Combine and finalize the answers:
+
+- Run `src/experiments/consolidate.py` to merge answers from all experiments.
+- Execute `src/experiments/coalesce.py` for a final LLM pass to ensure cohesive, non-duplicative answers.
 
 ## Additional Resources
-- `/src/insights`: Contains code for comparative analysis and visualization.
+- Explore `/src/insights` for code related to comparative analysis and visualizations.
 
 ---
