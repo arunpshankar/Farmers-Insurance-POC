@@ -11,20 +11,27 @@ class LLM:
     Attributes:
         model (ChatVertexAI): The chat model loaded from Vertex AI.
     """
+    _model_instance = None  # Class attribute to hold the singleton instance
 
     def __init__(self) -> None:
         """
         Initializes the LLM class by loading the chat model.
         """
-        self.model = self._initialize_model()
+        if LLM._model_instance is None:  # Check if the instance doesn't exist
+            LLM._model_instance = self._initialize_model()  # Create the instance if not exist
+        self.model = LLM._model_instance  # Assign the singleton instance to self.model
 
-    def _initialize_model(self) -> Optional[ChatVertexAI]:
+    @classmethod
+    def _initialize_model(cls) -> Optional[ChatVertexAI]:
         """
         Loads the chat model from Vertex AI.
 
         Returns:
             ChatVertexAI: An instance of the Vertex AI chat model.
         """
+        if cls._model_instance is not None:  # Check if the instance already exists
+            return cls._model_instance  # Return the existing instance
+
         try:
             model = ChatVertexAI(
                 model_name=config.TEXT_GEN_MODEL_NAME,
@@ -33,6 +40,7 @@ class LLM:
                 verbose=True
             )
             logger.info("Chat model loaded successfully.")
+            cls._model_instance = model  # Store the created instance
             return model
         except Exception as e:
             logger.error(f"Failed to load the model: {e}")

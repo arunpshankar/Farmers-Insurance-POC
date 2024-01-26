@@ -1,0 +1,25 @@
+from src.search.doc_search_multi_query import multi_query_search
+from src.config.logging import logger
+import jsonlines 
+import csv
+
+
+def process_csv_and_write_jsonl(csv_file_path, jsonl_file_path):
+    with open(csv_file_path, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        with jsonlines.open(jsonl_file_path, mode='w') as writer:
+            for row in reader:
+                query = row['question']
+                brand = row['filter']
+                logger.info(f'Performing doc search for query={query}')
+                search_result = multi_query_search(query, brand)
+                # Include the query and brand in the result
+                search_result.update({"query": query, "brand": brand})
+                writer.write(search_result)
+
+# Define file paths
+csv_file_path = './data/input/sampled_eval.csv'
+jsonl_file_path = './data/results/sampled_eval_mq_doc_search.jsonl'
+
+# Process the CSV file and write to a JSONL file
+process_csv_and_write_jsonl(csv_file_path, jsonl_file_path)

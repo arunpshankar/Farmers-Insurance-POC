@@ -20,10 +20,9 @@ def multi_query_search(query: str, brand: str) -> dict:
     Exception: If an error occurs during the query expansion or search process.
     """
     try:
-        variants = expand_query_and_get_variants(query)
+        variants = expand_query_and_get_variants(query, 4)
         search_results = {}
-        result = search(query, brand)
-        search_results[query] = result
+    
         for variant in variants:
             result = search(variant, brand)
             search_results[variant] = result
