@@ -105,7 +105,7 @@ def read_jsonl_file(file_path: str) -> List[QueryResults]:
             for line in file:
                 data = json.loads(line)
                 results = [SearchResult(match) for match in data.get('match_info', [])]
-                query_result = QueryResults(data['query'], data['brand'], data.get('summarized_answer', ''), results)
+                query_result = QueryResults(data['query'], data['brand'], data.get('summarized_answer', ''),  results)
                 query_results_list.append(query_result)
     except FileNotFoundError as e:
         logger.error(f"File not found: {e}")
