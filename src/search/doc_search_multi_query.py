@@ -4,9 +4,7 @@ from src.search.doc_search import search
 from src.config.logging import logger
 from src.config.setup import config
 
-
-
-
+# in progress
 
 query = "How do I stop pay a refund check?"
 brand = "Farmers"
