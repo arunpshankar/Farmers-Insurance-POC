@@ -52,7 +52,7 @@ class LLM:
         task = "Given a query and context, identify the answer within the provided context. Please provide a detailed answer with all the steps."
         logger.info(f'Query = {query}')
         try:
-            human_template = "{task}\\nnQuery:\n{query}\n\nContext:\n{context}\n\nAnswer:"
+            human_template = "{task}\n\nQuery:\n{query}\n\nContext:\n{context}\n\nAnswer:"
             human_message = HumanMessagePromptTemplate.from_template(human_template)
             chat_template = ChatPromptTemplate.from_messages([human_message])
             prompt = chat_template.format_prompt(task=task, query=query, context=context).to_messages()
@@ -72,7 +72,7 @@ class LLM:
         Remove all types of citations like [1], [1, 3]."""
         logger.info('Formatting generated answer...')
         try:
-            human_template = "{task}\\nnAnswer:\n{answer}\n\nFormatted Answer:"
+            human_template = "{task}\n\nAnswer:\n{answer}\n\nFormatted Answer:"
             human_message = HumanMessagePromptTemplate.from_template(human_template)
             chat_template = ChatPromptTemplate.from_messages([human_message])
             prompt = chat_template.format_prompt(task=task, answer=answer).to_messages()
@@ -92,7 +92,7 @@ class LLM:
 Be sure to remove any extraneous sentences at the beginning of the answers, such as "formatted answer" or "sure, here is the formatted answer," and so on."""
         logger.info('Coalescing answers...')
         try:
-            human_template = "{task}\\nnAnswers:\n{answers}\n\Combined Answer:"
+            human_template = "{task}\n\nAnswers:\n{answers}\n\nCombined Answer:"
             human_message = HumanMessagePromptTemplate.from_template(human_template)
             chat_template = ChatPromptTemplate.from_messages([human_message])
             prompt = chat_template.format_prompt(task=task, answers=answers).to_messages()
@@ -102,7 +102,22 @@ Be sure to remove any extraneous sentences at the beginning of the answers, such
         except Exception as e:
             logger.error(f"Error during model prediction: {e}")
             return None
+        
 
+    def expand_query(self, query: str) -> list:
+        task = """Given a query, create four variations of the original query. Return the generated queries as a string, separated by a pipe (|), without linebreaks."""
+        try:
+            human_template = "{task}\n\Query:\n{query}\n\nVariants:"
+            human_message = HumanMessagePromptTemplate.from_template(human_template)
+            chat_template = ChatPromptTemplate.from_messages([human_message])
+            prompt = chat_template.format_prompt(task=task, query=query).to_messages()
+            response = self.model(prompt)
+            completion = response.content
+            return completion.strip()
+        except Exception as e:
+            logger.error(f"Error during query expansion: {e}")
+            return None
+        
 
 if __name__ == '__main__':
     llm = LLM()
@@ -115,3 +130,7 @@ if __name__ == '__main__':
     answer = "To process a refund void stop pay request, you can open a Word document and title it with the current date followed by Void Stop and your initials [3]. You can then review the diary comments and void stop pay request [3]. At least one must state the agent or named insured was advised not to attempt to cash the original check [3]. If not noted, the request cannot be processed [3]. You can also process the void via AS400 [4]. Be sure to screen shot and copy to Word document prior to finalizing AS400 void [4]. You can also reapply a same day refund to a policy [4]. The Diary Comment policy should state: Processed Void Stop Pay request to Reapply refund to policy [4]. You can save Word document screen shots to shared Z drive: Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops [4]. If one of the individuals on the refund check is now deceased, you can stop payment and reissue a refund check payable to both the living person and â€œThe Estate ofâ€ the deceased person [2]."
     formatted_answer = llm.format_answer(answer=answer)
     print(formatted_answer)
+    print('-' * 100)
+    query = 'When would I recycle a diary comment in PSP?'
+    variants = llm.expand_query(query)
+    print(variants)

@@ -54,8 +54,8 @@ def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
 def main():
     """ Main function to execute the script tasks. """
     # File paths
-    jsonl_file_path = './data/results/sampled_eval_doc_search.jsonl'  
-    csv_file_path = './data/input/sampled_eval.csv'
+    jsonl_file_path = './data/results/eval_doc_search.jsonl'  
+    csv_file_path = './data/input/eval.csv'
     concat_csv_path = './data/results/exp_2.csv'
     excel_output_path = './data/results/exp_2.xlsx'
 

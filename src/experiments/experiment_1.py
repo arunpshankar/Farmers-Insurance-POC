@@ -48,15 +48,14 @@ def combine_dataframes(df_csv: pd.DataFrame, df_jsonl: pd.DataFrame) -> pd.DataF
 def main():
     """ Main function to execute the script tasks. """
     # File paths
-    jsonl_file_path = './data/results/sampled_eval_doc_search.jsonl'
-    csv_file_path = './data/input/sampled_eval.csv'
+    jsonl_file_path = './data/results/eval_doc_search.jsonl'
+    csv_file_path = './data/input/eval.csv'
     concat_csv_path = './data/results/exp_1.csv'
     excel_output_path = './data/results/exp_1.xlsx'
 
     logger.info("Reading and processing JSONL file.")
     jsonl_data = read_and_process_jsonl(jsonl_file_path)
     df_jsonl = pd.DataFrame(jsonl_data)
-    print(df_jsonl)
 
     df_csv = read_csv(csv_file_path)
     if df_csv.empty:
