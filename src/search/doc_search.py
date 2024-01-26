@@ -179,7 +179,6 @@ def search(query: str, brand: str) -> Dict[str, Any]:
                     Returns an empty dictionary if an error occurs.
     """
     filter_str = f"Brand: ANY(\"{brand}\")"
-    print(filter_str)
 
     try:
         # Perform the search with the provided query and filter

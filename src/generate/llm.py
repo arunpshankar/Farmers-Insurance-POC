@@ -104,8 +104,8 @@ Be sure to remove any extraneous sentences at the beginning of the answers, such
             return None
         
 
-    def expand_query(self, query: str) -> list:
-        task = """Given a query, create four variations of the original query. Return the generated queries as a string, separated by a pipe (|), without linebreaks."""
+    def expand_query(self, query: str, n: int) -> list:
+        task = f"""Given a query, create {n} unique variants of the original query. Return the generated queries as a string, separated by a pipe (|), without linebreaks."""
         try:
             human_template = "{task}\n\Query:\n{query}\n\nVariants:"
             human_message = HumanMessagePromptTemplate.from_template(human_template)
@@ -132,5 +132,5 @@ if __name__ == '__main__':
     print(formatted_answer)
     print('-' * 100)
     query = 'When would I recycle a diary comment in PSP?'
-    variants = llm.expand_query(query)
+    variants = llm.expand_query(query, 4)
     print(variants)
