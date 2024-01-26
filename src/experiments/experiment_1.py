@@ -11,17 +11,17 @@ llm = LLM()
 
 def read_and_process_jsonl(file_path: str) -> List[Dict]:
     """ Reads and processes data from a JSONL file. """
+    out_data = []
     try:
         query_results = read_jsonl_file(file_path)
-        out_data = []
-        for result in query_results:
+        for query_result in query_results:
             matched_articles_new = []
-            matches = result.results
-            citations = result.extract_citations(result.summarized_answer)
+            matches = query_result.results
+            citations = query_result.extract_citations(query_result.summarized_answer)
             for rank, match in matches.items():
                 if rank in citations:
                     matched_articles_new.append(match.knowledge_id)
-            out_data.append({'brand': result.brand, 'ans_exp_1': llm.format_answer(result.summarized_answer), 'matched_articles_new': '\n'.join(matched_articles_new)})
+            out_data.append({'brand': query_result.brand, 'ans_exp_1': llm.format_answer(query_result.summarized_answer), 'matched_articles_new': '\n'.join(matched_articles_new)})
         return out_data
     except Exception as e:
         logger.error(f"Error reading or processing JSONL file: {e}")

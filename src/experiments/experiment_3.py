@@ -10,22 +10,28 @@ llm = LLM()
 
 def extract_and_process_data(file_path: str) -> List[Dict]:
     """ Extracts and processes data from a JSONL file. """
-    data = []
+    out_data = []
     try:
         query_results = read_jsonl_file(file_path)
         for query_result in query_results:
+            matched_articles_new = []
             summarized_answer = query_result.summarized_answer
             citations = query_result.extract_citations(summarized_answer)
             context = '\n\n'.join([query_result.get_extractive_segment_by_rank(rank) for rank in citations])
             query = query_result.query
             ans = llm.find_answer(query, context)
-            data.append({
+            matches = query_result.results
+            for rank, match in matches.items():
+                if rank in citations:
+                    matched_articles_new.append(match.knowledge_id)
+            out_data.append({
                 'brand': query_result.brand,
-                'ans_exp_3': llm.format_answer(ans)
+                'ans_exp_3': llm.format_answer(ans),
+                'matched_articles_new': '\n'.join(matched_articles_new)
             })
     except Exception as e:
         logger.error(f"Error in extracting and processing JSONL data: {e}")
-    return data
+    return out_data
 
 def read_and_drop_csv(file_path: str, columns_to_drop: List[str]) -> pd.DataFrame:
     """ Reads a CSV file and drops specified columns. """
@@ -48,15 +54,15 @@ def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
 def main():
     """ Main function to execute the script tasks. """
     # File paths
-    jsonl_file_path = './data/results/eval_doc_search.jsonl'
-    csv_file_path = './data/input/eval.csv'
+    jsonl_file_path = './data/results/sampled_eval_doc_search.jsonl'
+    csv_file_path = './data/input/sampled_eval.csv'
     concat_csv_path = './data/results/exp_3.csv'
     excel_output_path = './data/results/exp_3.xlsx'
 
     jsonl_data = extract_and_process_data(jsonl_file_path)
     df_jsonl = pd.DataFrame(jsonl_data)
 
-    df_csv_dropped = read_and_drop_csv(csv_file_path, ['article_id', 'filter', 'matched_articles'])
+    df_csv_dropped = read_and_drop_csv(csv_file_path, ['filter'])
     if df_csv_dropped.empty:
         return
 
