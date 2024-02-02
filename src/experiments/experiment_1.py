@@ -1,4 +1,4 @@
-from src.experiments.retrieve import read_jsonl_file
+from search.retriever import read_jsonl_file
 from src.utils.io import save_to_excel
 from src.config.logging import logger
 from src.utils.io import save_to_csv
