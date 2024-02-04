@@ -6,7 +6,7 @@ from src.generate.llm import LLM
 from google.cloud import storage
 from typing import Optional
 from typing import List
-from typing import Dict
+from typing import Dict 
 import pandas as pd
 import PyPDF2
 import io
@@ -62,4 +62,84 @@ def extract_text_from_gcs_pdf(gcs_url: str) -> Optional[str]:
         logger.error(f"An error occurred: {e}")
         return None
     
+
+def construct_gcs_url(match_id: str) -> str:
+    """
+    Generates a Google Cloud Storage (GCS) URL for a PDF document based on its match ID.
+
+    Parameters:
+    - match_id (str): Unique identifier of the document.
+
+    Returns:
+    - str: GCS URL for the document.
+    """
+    base_url = 'gs://farmers-poc-as/documents-for-vertex-search-v1/pdfs_v3/{match_id}.pdf'
+    return base_url.format(match_id=match_id)
+
+
+def extract_and_process_data(file_path: str) -> List[Dict]:
+    """ Extracts and processes data from a JSONL file. """
+    out_data = []
+    try:
+        query_results = read_jsonl_file(file_path)
+        for query_result in query_results:
+            match_id = query_result.match_id
+            query = query_result.query
+            gcs_url = construct_gcs_url(match_id)
+            context = extract_text_from_gcs_pdf(gcs_url)
+            ans = llm.find_answer(query, context)
+            out_data.append({
+                'brand': query_result.brand,
+                'ans_exp_5': llm.format_answer(ans),
+                'matched_article_new': match_id
+            })
+    except Exception as e:
+        logger.error(f"Error in extracting and processing JSONL data: {e}")
+    return out_data
+
+
+def read_and_drop_csv(file_path: str, columns_to_drop: List[str]) -> pd.DataFrame:
+    """ Reads a CSV file and drops specified columns. """
+    try:
+        df = pd.read_csv(file_path)
+        return df.drop(columns=columns_to_drop)
+    except Exception as e:
+        logger.error(f"Error reading or processing CSV file: {e}")
+        return pd.DataFrame()
+
+
+def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
+    """ Combines two DataFrames. """
+    try:
+        return pd.concat([df1, df2], axis=1)
+    except Exception as e:
+        logger.error(f"Error combining dataframes: {e}")
+        return pd.DataFrame()
+
+
+def main():
+    """ Main function to execute the script tasks. """
+    # File paths
+    jsonl_file_path = './data/results/eval_2_mq_doc_search.jsonl'
+    csv_file_path = './data/input/eval_2.csv'
+    concat_csv_path = './data/results/exp_5.csv'
+    excel_output_path = './data/results/exp_5.xlsx'
+
+    jsonl_data = extract_and_process_data(jsonl_file_path)
+    df_jsonl = pd.DataFrame(jsonl_data)
+
+    df_csv_dropped = read_and_drop_csv(csv_file_path, ['filter'])
+    if df_csv_dropped.empty:
+        return
+
+    df_combined = combine_dataframes(df_csv_dropped, df_jsonl)
+    if df_combined.empty:
+        return
+
+    save_to_csv(df_combined, concat_csv_path)
+    save_to_excel(df_combined, excel_output_path)
+
+
+if __name__ == "__main__":
+    main()
 
