@@ -22,7 +22,7 @@ def multi_query_search(query: str, brand: str) -> dict:
     try:
         variants = expand_query_and_get_variants(query, 4)
         search_results = {}
-    
+        search_results[query] = search(query, brand)
         for variant in variants:
             result = search(variant, brand)
             search_results[variant] = result
@@ -35,7 +35,9 @@ if __name__ == '__main__':
     query = "How do I stop a refund check?"
     brand = "Farmers"
     results = multi_query_search(query, brand)
+    
     for variant, result in results.items():
         print(f"Query: {variant}")
-        print(result)
+        ans = result['summarized_answer']
+        print(f'Answer: {ans}')
         print('-' * 100)

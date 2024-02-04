@@ -1,4 +1,4 @@
-from search.retriever import read_jsonl_file
+from src.search.retriever import read_jsonl_file
 from src.utils.io import save_to_excel
 from src.config.logging import logger
 from src.utils.io import save_to_csv
@@ -72,7 +72,6 @@ def extract_and_process_data(file_path: str) -> List[Dict]:
             summarized_answer = query_result.summarized_answer
             citations = query_result.extract_citations(summarized_answer)
             most_cited = query_result.most_cited(summarized_answer)[0]
-            print(most_cited)
             matches = query_result.results
             top_match = matches.get(most_cited)
             query = query_result.query
