@@ -150,26 +150,19 @@ Be sure to remove any extraneous sentences at the beginning of the answers, such
         return completion
 
 
-
-
-
-        
-
 if __name__ == '__main__':
     llm = LLM()
 
-    #task = "Given a query and context, find the answer to the query from the provided context. "
-    #query = "How to reinstate policy if cancelled mid-term?"
-    #context = """Q_A_Answer__c : If a policy cancels mid-term for non-payment, the insured has up to 11 calendar days to reinstate it with a lapse. ex: A policy cancelled on 4/1/2021 would have until 4/11/2021 to make payment to reinstate with lapse. Counting 4/1/2021 as day 1 this would be 11 calendar days."""
-    #answer = llm.find_answer(query=query, context=context)
-    """
+    task = "Given a query and context, find the answer to the query from the provided context. "
+    query = "How to reinstate policy if cancelled mid-term?"
+    context = """Q_A_Answer__c : If a policy cancels mid-term for non-payment, the insured has up to 11 calendar days to reinstate it with a lapse. ex: A policy cancelled on 4/1/2021 would have until 4/11/2021 to make payment to reinstate with lapse. Counting 4/1/2021 as day 1 this would be 11 calendar days."""
+    answer = llm.find_answer(query=query, context=context)
     print(answer)
     print('-' * 100)
     answer = "To process a refund void stop pay request, you can open a Word document and title it with the current date followed by Void Stop and your initials [3]. You can then review the diary comments and void stop pay request [3]. At least one must state the agent or named insured was advised not to attempt to cash the original check [3]. If not noted, the request cannot be processed [3]. You can also process the void via AS400 [4]. Be sure to screen shot and copy to Word document prior to finalizing AS400 void [4]. You can also reapply a same day refund to a policy [4]. The Diary Comment policy should state: Processed Void Stop Pay request to Reapply refund to policy [4]. You can save Word document screen shots to shared Z drive: Operations/Accounting Services/Accounting Services/Void check_Stop pay/2Void Stop Pays/Year Void Stop Pays/Month Void Stops [4]. If one of the individuals on the refund check is now deceased, you can stop payment and reissue a refund check payable to both the living person and â€œThe Estate ofâ€ the deceased person [2]."
     formatted_answer = llm.format_answer(answer=answer)
     print(formatted_answer)
     print('-' * 100)
-    """
     query = 'When would I recycle a diary comment in PSP?'
     variants = llm.expand_query(query, 4)
     print(variants)
