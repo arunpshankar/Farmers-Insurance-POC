@@ -1,8 +1,8 @@
-from typing import List
-import logging
 from src.config.logging import logger
-from src.config.setup import config
 from src.generate.llm import LLM
+from src.config.setup import *
+from typing import List
+
 
 def expand_query_and_get_variants(query: str, num_variants: int = 4) -> List[str]:
     """
@@ -20,8 +20,7 @@ def expand_query_and_get_variants(query: str, num_variants: int = 4) -> List[str
     """
     try:
         llm = LLM()  # Initialize the language model
-        expanded_query = llm.expand_query(query, num_variants)
-        variants = expanded_query.split('|')
+        variants = llm.expand_query(query, num_variants)
         cleaned_variants = [variant.strip() for variant in variants]
         return cleaned_variants
     except Exception as e:

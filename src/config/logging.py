@@ -1,6 +1,7 @@
 import logging
 import os
 
+
 def custom_path_filter(path):
     # Define the project root name
     project_root = "VertexAIDocExplorer"

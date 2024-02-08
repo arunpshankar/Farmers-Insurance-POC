@@ -98,6 +98,43 @@ def extract_and_process_data(file_path: str) -> List[Dict]:
     return out_data
 
 
+def extract_and_process_data_top_k_ids(file_path: str) -> List[Dict]:
+    """ Extracts and processes data from a JSONL file. """
+    out_data = []
+    try:
+        i = 0
+        query_results = read_jsonl_file(file_path)
+        for query_result in query_results:
+            print(i+1)
+            match_ids = query_result.match_ids
+            cited_ids = query_result.cited_ids
+            query = query_result.query
+            context = []
+            """
+            for match_id in match_ids:
+                gcs_url = construct_gcs_url(match_id)
+                text = extract_text_from_gcs_pdf(gcs_url)
+                #context.append(text)
+                context = text
+                ans = llm.find_answer(query, context)
+                print(ans)
+            context = '\n\n'.join(context)
+            """
+            #ans = llm.find_answer(query, context)
+            ans = 'foobar'
+            out_data.append({
+                'brand': query_result.brand,
+                 # 'ans_exp_5': llm.format_answer(ans),
+                'ans_exp_5': ans,
+                'cited_new': cited_ids,
+                'matched_article_new': match_ids
+            })
+            i += 1
+    except Exception as e:
+        logger.error(f"Error in extracting and processing JSONL data: {e}")
+    return out_data
+
+
 def read_and_drop_csv(file_path: str, columns_to_drop: List[str]) -> pd.DataFrame:
     """ Reads a CSV file and drops specified columns. """
     try:
@@ -125,7 +162,7 @@ def main():
     concat_csv_path = './data/results/exp_5.csv'
     excel_output_path = './data/results/exp_5.xlsx'
 
-    jsonl_data = extract_and_process_data(jsonl_file_path)
+    jsonl_data = extract_and_process_data_top_k_ids(jsonl_file_path)
     df_jsonl = pd.DataFrame(jsonl_data)
 
     df_csv_dropped = read_and_drop_csv(csv_file_path, ['filter'])
