@@ -187,6 +187,6 @@ def process_dataframe(df_path: str, output_path: str) -> None:
 
 if __name__ == "__main__":
     # Example usage
-    input_csv_path = './data/results/exp_5.csv'
-    output_csv_path = './data/results/exp_5_1.csv'
+    input_csv_path = './data/results/exp_5_new.csv'
+    output_csv_path = './data/results/exp_5_1_new.csv'
     process_dataframe(input_csv_path, output_csv_path)

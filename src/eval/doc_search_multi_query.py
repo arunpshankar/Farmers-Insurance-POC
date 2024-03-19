@@ -19,7 +19,7 @@ def process_csv_and_write_jsonl(csv_file_path, jsonl_file_path):
 
 # Define file paths
 csv_file_path = './data/input/eval_2.csv'
-jsonl_file_path = './data/results/eval_2_mq_doc_search.jsonl'
+jsonl_file_path = './data/results/eval_2_mq_doc_search_new.jsonl'
 
 # Process the CSV file and write to a JSONL file
 process_csv_and_write_jsonl(csv_file_path, jsonl_file_path)

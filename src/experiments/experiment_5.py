@@ -157,10 +157,10 @@ def combine_dataframes(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
 def main():
     """ Main function to execute the script tasks. """
     # File paths
-    jsonl_file_path = './data/results/eval_2_mq_doc_search.jsonl'
+    jsonl_file_path = './data/results/eval_2_mq_doc_search_new.jsonl'
     csv_file_path = './data/input/eval_2.csv'
-    concat_csv_path = './data/results/exp_5.csv'
-    excel_output_path = './data/results/exp_5.xlsx'
+    concat_csv_path = './data/results/exp_5_new.csv'
+    excel_output_path = './data/results/exp_5_new.xlsx'
 
     jsonl_data = extract_and_process_data_top_k_ids(jsonl_file_path)
     df_jsonl = pd.DataFrame(jsonl_data)
